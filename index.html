@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>ThePilot.in</title>
     <!-- Google Font  -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -42,7 +44,7 @@
     </script>
   </head>
 
-  <body class="bg-white min-h-screen overflow-x-hidden">
+  <body class="bg-white min-h-screen w-screen overflow-x-hidden">
     <!-- desktop nav-->
     <nav
       class="hidden max-w-[1400px] lg:flex rounded-full my-3 py-3 px-3 lg:px-4 bg-[#1C3867] items-center justify-between w-[90%] border-b mx-auto"
@@ -152,7 +154,7 @@
       </div>
       <div
         id="mobile-menu"
-        class="fixed top-0 left-0 bg-white w-full h-fit flex flex-col p-6 items-start z-[200] transform -translate-y-full transition-transform duration-300 ease-in-out"
+        class="fixed top-0 left-0 bg-white w-[100vw] h-fit flex flex-col p-6 items-start z-[200] transform -translate-y-full transition-transform duration-300 ease-in-out"
       >
         <button id="close-btn" class="absolute top-10 right-10 text-2xl">
           &#10005;
@@ -243,7 +245,7 @@
     </nav>
     <!-- hero -->
     <section
-      class="relative min-h-[80vh] md:min-h-fit over pb-10 w-full flex flex-row gap-4 justify-end items-center w-full 2xl:pl-[15%]"
+      class="relative min-h-[80vh] md:min-h-fit pb-10 w-full flex flex-row gap-4 justify-end items-center w-full 2xl:pl-[15%]"
     >
       <div class="w-full h-full absolute top-0 left-0 -z-10">
         <img
@@ -261,12 +263,12 @@
         >
           <div class="flex flex-col">
             <h1
-              class="capitalize text-[#1c3867] helvatica-font text-6xl lg:text-7xl"
+              class="capitalize text-[#1c3867] helvatica-font text-5xl lg:text-7xl"
             >
               BECOME AN
             </h1>
             <h1
-              class="text-[#a7e1ff] helvatica-font capitalize text-6xl lg:text-7xl mb-6"
+              class="text-[#a7e1ff] helvatica-font capitalize text-5xl lg:text-7xl mb-6"
             >
               AIRLINE PILOT
             </h1>
@@ -439,7 +441,7 @@
     <!-- partners companies -->
     <section class="py-10 bg-[#A7E1FF26] w-full">
       <div
-        class="mx-10 md:mx-14 lg:mx-20 max-w-[1400px] flex flex-row flex-wrap justify-center md:justify-around items-center gap-7"
+        class="mx-6 md:mx-14 lg:mx-20 max-w-[1400px] flex flex-row flex-wrap justify-center md:justify-around items-center gap-7"
       >
         <div class="w-fit">
           <img src="./public/banner-air-asia.svg" alt="" />
@@ -589,7 +591,7 @@
       class="py-10 max-w-[1400px] grid place-items-center w-full"
     >
       <div
-        class="mx-10 md:mx-14 lg:mx-20 flex flex-col gap-10 justify-center items-center"
+        class="mx-6 md:mx-14 lg:mx-20 flex flex-col gap-10 justify-center items-center"
       >
         <div class="flex flex-col w-full gap-2 justify-center items-center">
           <h1
@@ -655,7 +657,7 @@
       class="py-10 max-w-[1400px] grid place-items-center"
     >
       <div
-        class="mx-10 md:mx-14 lg:mx-20 p-6 flex flex-col gap-10 justify-center items-center w-full"
+        class="mx-6 md:mx-14 lg:mx-20 p-6 flex flex-col gap-10 justify-center items-center w-full"
       >
         <div class="flex flex-col w-full gap-3 justify-center items-center">
           <div
@@ -872,7 +874,7 @@
       />
 
       <div
-        class="mx-10 md:mx-14 lg:mx-20 max-w-[1400px] flex flex-col gap-10 justify-center items-center"
+        class="mx-6 md:mx-14 lg:mx-20 max-w-[1400px] flex flex-col gap-10 justify-center items-center"
       >
         <div class="flex flex-col w-full gap-2 justify-center items-center">
           <div
@@ -1111,18 +1113,16 @@
       </div>
     </section>
     <!-- boasting passing results -->
-    <section
-      class="py-10 max-w-[1400px] mx-auto my-10 grid place-items-center w-full"
-    >
+    <section class="py-10 max-w-[1400px] my-10 grid place-items-center pl-6">
       <h1
         class="capitalize text-[#1c3867] p-6 font-bold text-4xl line-h-[125px] text-left"
       >
         Boasting outstanding pass results
       </h1>
-      <div class="relative w-full">
+      <div class="relative w-[90vw]">
         <div
           id="cardCarousel"
-          class="flex gap-4 w-[100vw] pl-6 overflow-x-auto whitespace-nowrap scroll-smooth scrollbar-hide py-4"
+          class="flex gap-4 overflow-x-auto whitespace-nowrap scroll-smooth scrollbar-hide py-4"
         >
           <div
             class="w-[200px] shrink-0 bg-white border-2 border-[#ccc] p-2 rounded-2xl"
@@ -1446,7 +1446,7 @@
       class="py-10 max-w-[1400px] grid place-items-center w-full"
     >
       <div
-        class="mx-10 md:mx-14 lg:mx-20 max-w-[1400px] flex flex-col gap-10 justify-center items-center"
+        class="mx-6 md:mx-14 lg:mx-20 max-w-[1400px] flex flex-col gap-10 justify-center items-center"
       >
         <div class="flex flex-col w-full gap-2 justify-center items-center">
           <div
@@ -1672,7 +1672,7 @@
       class="py-10 max-w-[1400px] grid place-items-center w-full"
     >
       <div
-        class="mx-10 md:mx-14 lg:mx-20 w-full p-6 flex flex-col gap-10 justify-center items-center"
+        class="mx-6 md:mx-14 lg:mx-20 w-full p-6 flex flex-col gap-10 justify-center items-center"
       >
         <div class="flex flex-col gap-2 w-full justify-center items-center">
           <div
@@ -1780,7 +1780,7 @@
       class="py-10 max-w-[1400px] grid place-items-center w-full"
     >
       <div
-        class="mx-10 w-full md:mx-14 lg:mx-20 w-full p-6 flex flex-col gap-10 justify-center items-center"
+        class="mx-6 w-full md:mx-14 lg:mx-20 w-full p-6 flex flex-col gap-10 justify-center items-center"
       >
         <div
           class="flex flex-col lg:flex-row w-full gap-2 items-start lg:justify-between lg:items-end"
@@ -1908,7 +1908,7 @@
     <!-- how to become pilot -->
     <section class="py-10 max-w-[1400px] grid place-items-center w-full">
       <div
-        class="mx-10 md:mx-14 lg:mx-20 max-w-[1400px] flex flex-col lg:flex-row gap-10 justify-center items-center"
+        class="mx-6 md:mx-14 lg:mx-20 max-w-[1400px] flex flex-col lg:flex-row gap-10 justify-center items-center"
       >
         <div class="flex flex-1.5 flex-col w-full gap-2 justify-between">
           <div class="flex flex-row gap-2">
@@ -2043,7 +2043,7 @@
     </section>
     <section class="py-10 max-w-[1400px] grid place-items-center w-full">
       <div
-        class="mx-10 md:mx-14 lg:mx-20 max-w-[1400px] flex flex-col lg:flex-row gap-10 justify-center items-center"
+        class="mx-6 md:mx-14 lg:mx-20 max-w-[1400px] flex flex-col lg:flex-row gap-10 justify-center items-center"
       >
         <div
           class="flex flex-col w-full lg:w-fit lg:flex-row gap-6 items-left lg:items-center"
@@ -2087,7 +2087,7 @@
       class="py-10 max-w-[1400px] grid place-items-center w-full"
     >
       <div
-        class="mx-10 md:mx-14 lg:mx-20 max-w-[1400px] flex flex-col gap-10 justify-center items-center"
+        class="mx-6 md:mx-14 lg:mx-20 max-w-[1400px] flex flex-col gap-10 justify-center items-center"
       >
         <div class="flex flex-col w-full gap-2 justify-between">
           <h1
@@ -2201,15 +2201,12 @@
         </div>
       </div>
     </section>
-    <section
-      id="loans"
-      class="py-10 max-w-[1400px] grid place-items-center w-full"
-    >
+    <section id="loans" class="py-10 max-w-[1400px] grid place-items-center">
       <div
         class="ml-10 md:ml-14 lg:ml-20 grid grid-cols-12 lg:flex-row items-center gap-4"
       >
         <div
-          class="col-span-12 lg:col-span-6 flex flex-col justify-center w-full gap-8"
+          class="col-span-12 lg:col-span-6 flex flex-col justify-center gap-8"
         >
           <h1 class="capitalize text-[#1c3867] font-semibold text-3xl">
             Education Loans
@@ -2218,7 +2215,7 @@
             <div>
               <img
                 src="./public/edu-loans-logo.png"
-                class="w-22 md:w-full"
+                class="w-20 md:w-full"
                 alt=""
               />
             </div>
@@ -2232,7 +2229,7 @@
             <div>
               <img
                 src="./public/pilot-logo-blue.svg"
-                class="w-22 md:w-full"
+                class="w-20 md:w-full"
                 alt=""
               />
             </div>
@@ -2269,13 +2266,13 @@
     </section>
     <section class="py-10 max-w-[1400px] grid place-items-center w-full">
       <div
-        class="mx-10 md:mx-14 lg:mx-20 grid grid-cols-12 lg:flex-row items-center gap-4"
+        class="mx-6 md:mx-14 lg:mx-20 grid grid-cols-12 lg:flex-row items-center gap-4"
       >
         <div
           class="col-span-12 lg:col-span-5 flex flex-col justify-center w-full lg:p-16 gap-8"
         >
           <h1
-            class="capitalize text-[#1c3867] font-bold text-7xl line-h-[125px] text-left"
+            class="capitalize text-[#1c3867] font-bold text-5xl md:text-7xl line-h-[125px] text-left"
           >
             Global Training Foot Print
           </h1>
@@ -2838,7 +2835,7 @@
     <!-- NEWS -->
     <section class="py-10 max-w-[1400px] grid place-items-center w-full">
       <div
-        class="mx-10 md:mx-14 lg:mx-20 w-full max-w-[1400px]flex flex-col items-center gap-8 justify-center p-10"
+        class="mx-6 md:mx-14 lg:mx-20 w-full max-w-[1400px]flex flex-col items-center gap-8 justify-center p-10"
       >
         <h1
           class="capitalize text-[#1c3867] font-bold text-4xl text-center mb-10"
@@ -2955,7 +2952,7 @@
     <!-- footer -->
 
     <footer
-      class="bg-[#1C3867] overflow-hidden px-10 pt-10 md:px-16 lg:px-28 pb-6 m-4 rounded-2xl mx-4 relative"
+      class="bg-[#1C3867] overflow-hidden px-6 pt-10 md:px-16 lg:px-28 pb-6 m-4 rounded-2xl mx-4 relative"
     >
       <div class="absolute bottom-0 w-full right-0 pointer-events-none">
         <img src="./public/footer-vector.svg" class="w-full h-full" alt="" />

@@ -34,6 +34,14 @@
   margin: 0;
 }
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -94,4 +102,8 @@ h6 {
 
 .faq-answer-wrapper.open {
   max-height: 1000px; /* enough to fit your content */
+}
+
+section {
+  width: 100vw !important;
 }
