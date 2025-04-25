@@ -1,0 +1,97 @@
+@import url(https://db.onlinewebfonts.com/c/f2b7e336579d479bbc08c90df2dc67ed?family=Helvetica+Neue+W01+87+Hv+Cn+Obl);
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  --color-Pblue: #1c3867;
+  --color-Sblue: #a7e1ff;
+}
+
+@component {
+  .partner-card {
+    @apply bg-white rounded-lg shadow-md p-3 flex flex-col items-center justify-center;
+  }
+  .title-Text {
+    @apply text-4xl font-bold capitalize text-[#1C3867] text-center;
+  }
+  .title-sub-Text {
+    @apply /* text-2xl font-bold capitalize text-[#1C3867] text-center */;
+  }
+}
+
+@utility title-Text {
+  @apply text-4xl font-bold capitalize text-[#1C3867] text-center;
+}
+
+@utility title-sub-Text {
+  @apply text-2xl font-bold capitalize text-[#1C3867] text-center;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.vector-style {
+  background-repeat: repeat-y;
+}
+body {
+  font-family: "Inter Tight", sans-serif !important;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 18px;
+  background-color: white;
+  display: grid;
+  place-items: center;
+}
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-text {
+}
+.helvatica-font {
+  /* font-family: "Helvetica Neue W01 87 Hv Cn Obli", sans-serif; */
+  font-family: "Helvetica Neue W01 87 Hv Cn Obl" !important;
+}
+
+.footer-link {
+  color: white !important;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+.banner-overlay {
+  background: linear-gradient(270deg, rgba(28, 56, 103, 0) 0%, #1c3867 100%);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+/* Hide scrollbar for Webkit (Chrome, Safari) */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+.scrollbar-hide {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.faq-answer-wrapper.open {
+  max-height: 1000px; /* enough to fit your content */
+}
