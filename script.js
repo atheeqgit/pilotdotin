@@ -2,16 +2,19 @@ document.addEventListener("DOMContentLoaded", () => {
   // nav bar
   const menuBtn = document.getElementById("menu-btn");
   const mobileMenu = document.getElementById("mobile-menu");
-  const closeBtn = document.getElementById("close-btn");
+  const closeBtn = document.querySelectorAll("#close-btn");
 
   menuBtn.addEventListener("click", () => {
     mobileMenu.classList.remove("-translate-y-full"); // Slide menu into view
     mobileMenu.classList.add("translate-y-0");
   });
 
-  closeBtn.addEventListener("click", () => {
-    mobileMenu.classList.remove("translate-y-0"); // Slide menu out of view
-    mobileMenu.classList.add("-translate-y-full");
+  closeBtn.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      console.log("closed clicked");
+      mobileMenu.classList.remove("translate-y-0"); // Slide menu out of view
+      mobileMenu.classList.add("-translate-y-full");
+    });
   });
 
   // hero carousel
