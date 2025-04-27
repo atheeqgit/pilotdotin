@@ -1,24 +1,59 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // nav bar
+document.addEventListener("DOMContentLoaded", function () {
   const menuBtn = document.getElementById("menu-btn");
+  const closeBtn = document.getElementById("close-btn");
   const mobileMenu = document.getElementById("mobile-menu");
-  const closeBtn = document.querySelectorAll("#close-btn");
 
-  menuBtn.addEventListener("click", () => {
-    mobileMenu.classList.remove("-translate-y-full"); // Slide menu into view
-    mobileMenu.classList.add("translate-y-0");
+  // Toggle mobile menu
+  menuBtn.addEventListener("click", function () {
+    mobileMenu.classList.add("show-menu");
+    document.body.style.overflow = "hidden"; // Prevent scrolling when menu is open
   });
 
-  closeBtn.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      console.log("closed clicked");
-      mobileMenu.classList.remove("translate-y-0"); // Slide menu out of view
-      mobileMenu.classList.add("-translate-y-full");
+  closeBtn.addEventListener("click", function () {
+    mobileMenu.classList.remove("show-menu");
+    document.body.style.overflow = ""; // Restore scrolling
+  });
+
+  // Submenu toggle functionality
+  const submenuToggles = document.querySelectorAll(".submenu-toggle");
+
+  submenuToggles.forEach((toggle) => {
+    toggle.addEventListener("click", function (e) {
+      e.preventDefault();
+      const parentLi = this.closest("li");
+      const submenu = parentLi.querySelector("ul");
+
+      // Rotate chevron
+      this.classList.toggle("rotated");
+
+      // Toggle submenu
+      submenu.classList.toggle("show");
+
+      // Close other open submenus if needed
+      document
+        .querySelectorAll("#mobile-menu > ul > li > ul")
+        .forEach((menu) => {
+          if (menu !== submenu && menu.classList.contains("show")) {
+            menu.classList.remove("show");
+            menu.previousElementSibling
+              .querySelector(".submenu-toggle")
+              .classList.remove("rotated");
+          }
+        });
     });
   });
 
-  // hero carousel
+  // Close menu when clicking on a link
+  document.querySelectorAll("#mobile-menu a").forEach((link) => {
+    link.addEventListener("click", function () {
+      mobileMenu.classList.remove("show-menu");
+      document.body.style.overflow = "";
+    });
+  });
+});
 
+document.addEventListener("DOMContentLoaded", () => {
+  // hero carousel
   const slides = document.getElementById("carousel-slides");
   const slideElements = slides.children;
   const dotsContainer = document.getElementById("dots");
@@ -117,7 +152,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function scrollCards(direction) {
   const container = document.getElementById("cardCarousel");
-  const scrollAmount = 300;
+  const scrollAmount = 180;
 
   if (direction === "left") {
     container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
@@ -127,20 +162,6 @@ function scrollCards(direction) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  const menuBtn = document.getElementById("menu-btn");
-  const mobileMenu = document.getElementById("mobile-menu");
-  const closeBtn = document.getElementById("close-btn");
-
-  menuBtn.addEventListener("click", () => {
-    mobileMenu.classList.remove("-translate-y-full"); // Slide menu into view
-    mobileMenu.classList.add("translate-y-0");
-  });
-
-  closeBtn.addEventListener("click", () => {
-    mobileMenu.classList.remove("translate-y-0"); // Slide menu out of view
-    mobileMenu.classList.add("-translate-y-full");
-  });
-
   const reviews = [
     {
       name: "Ravi Sharma",
