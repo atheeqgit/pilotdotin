@@ -128,11 +128,11 @@ document.addEventListener("DOMContentLoaded", () => {
     link.addEventListener("click", (e) => {
       countryLinks.forEach((l) => {
         l.classList.remove("bg-[#1C3867]", "text-white");
-        l.classList.add("bg-white", "text-[#1C3867]");
+        l.classList.add("bg-transparent", "text-[#1C3867]");
       });
 
       // Add active styles to the clicked one
-      link.classList.remove("bg-white", "text-[#1C3867]");
+      link.classList.remove("bg-transparent", "text-[#1C3867]");
       link.classList.add("bg-[#1C3867]", "text-white");
     });
   });
@@ -149,17 +149,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
-
-function scrollCards(direction) {
-  const container = document.getElementById("cardCarousel");
-  const scrollAmount = 180;
-
-  if (direction === "left") {
-    container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
-  } else if (direction === "right") {
-    container.scrollBy({ left: scrollAmount, behavior: "smooth" });
-  }
-}
 
 document.addEventListener("DOMContentLoaded", () => {
   const reviews = [
@@ -251,9 +240,125 @@ document.addEventListener("DOMContentLoaded", () => {
   // Initial counter setup
   updateCounter();
   window.moveCarousel = moveCarousel;
-
-  // board carousel
 });
+
+// Passing results
+
+document.addEventListener("DOMContentLoaded", () => {
+  const data = [
+    {
+      image: "./public/pass-2.png",
+      regs: 76,
+      met: 76,
+      nav: 76,
+      rtr: 76,
+    },
+    {
+      image: "./public/pass-3.png",
+      regs: 76,
+      met: 76,
+      nav: 76,
+      rtr: 76,
+    },
+    {
+      image: "./public/pass-2.png",
+      regs: 76,
+      met: 76,
+      nav: 76,
+      rtr: 76,
+    },
+    {
+      image: "./public/pass-3.png",
+      regs: 76,
+      met: 76,
+      nav: 76,
+      rtr: 76,
+    },
+    {
+      image: "./public/pass-2.png",
+      regs: 76,
+      met: 76,
+      nav: 76,
+      rtr: 76,
+    },
+    {
+      image: "./public/pass-3.png",
+      regs: 76,
+      met: 76,
+      nav: 76,
+      rtr: 76,
+    },
+    {
+      image: "./public/pass-2.png",
+      regs: 76,
+      met: 76,
+      nav: 76,
+      rtr: 76,
+    },
+    {
+      image: "./public/pass-3.png",
+      regs: 76,
+      met: 76,
+      nav: 76,
+      rtr: 76,
+    },
+  ];
+
+  const carousel = document.getElementById("cardCarousel");
+
+  // Inject cards
+  data.forEach((item) => {
+    const card = document.createElement("div");
+    card.className =
+      "w-[160px] md:w-[180px] shrink-0 bg-[#EFF9FF] lg:bg-white  lg:border-2 lg:border-b-[5px] border-[#2D72EC26] p-2 rounded-xl";
+    card.innerHTML = `
+      <div class="w-full overflow-hidden rounded-xl">
+              <img
+                src=${item.image}
+                alt="pass"
+                class="w-full object-cover aspect-[4/4]"
+              />
+            </div>
+            <div class="grid grid-cols-4 gap-3 mt-2">
+              <div class="col-span-1 md:col-span-2 flex flex-col md:flex-row gap-2 justify-center items-center">
+                <h1 class="text-[#1C3867] text-sm md:text-lg font-semibold uppercase">
+                  REGS
+                </h1>
+                <h2 class="text-black text-xs md:text-base font-semibold uppercase">${item.regs}</h2>
+              </div>
+              <div class="col-span-1 md:col-span-2 flex flex-col md:flex-row gap-2 justify-center items-center">
+                <h1 class="text-[#1C3867] text-sm md:text-lg font-semibold uppercase">
+                  MET
+                </h1>
+                <h2 class="text-black text-xs md:text-base font-semibold uppercase">${item.met}</h2>
+              </div>
+              <div class="col-span-1 md:col-span-2 flex flex-col md:flex-row gap-2 justify-center items-center">
+                <h1 class="text-[#1C3867] text-sm md:text-lg font-semibold uppercase">
+                  NAV
+                </h1>
+                <h2 class="text-black text-xs md:text-base font-semibold uppercase">${item.nav}</h2>
+              </div>
+              <div class="col-span-1 md:col-span-2 flex flex-col md:flex-row gap-2 justify-center items-center">
+                <h1 class="text-[#1C3867] text-sm md:text-lg font-semibold uppercase">
+                  RTR
+                </h1>
+                <h2 class="text-black text-xs md:text-base font-semibold uppercase">${item.rtr}</h2>
+              </div>
+            </div>
+    `;
+    carousel.appendChild(card);
+  });
+});
+function scrollCards(direction) {
+  const container = document.getElementById("cardCarousel");
+  const scrollAmount = 180;
+
+  if (direction === "left") {
+    container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+  } else if (direction === "right") {
+    container.scrollBy({ left: scrollAmount, behavior: "smooth" });
+  }
+}
 
 document.addEventListener("DOMContentLoaded", function () {
   const faqItems = document.querySelectorAll(".faq-item");
