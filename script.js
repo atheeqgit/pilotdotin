@@ -193,68 +193,122 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   ];
 
+  // DOM Elements
   const carousel = document.getElementById("carousel");
   const countDisplay = document.getElementById("carousel-count");
-  const cardWidth = 310;
-  const visibleCards = 1;
-  let index = 0;
+  const prevBtn = document.getElementById("carousel-prev");
+  const nextBtn = document.getElementById("carousel-next");
 
-  // Inject cards
-  reviews.forEach((review) => {
-    const card = document.createElement("div");
-    card.className =
-      "min-w-[300px] max-w-[300px] p-4 bg-white rounded-lg shadow-xl";
-    card.innerHTML = `
-      <div class="flex items-center gap-3 mb-2">
-        <img src="${review.image}" class="w-12 h-12 rounded-full mr-3" alt="${review.name}" />
-        <div>
-          <p class="font-semibold">${review.name}</p>
-          <div class="flex flex-row gap-2 items-center">
-            <p class="text-yellow-400">${review.stars}</p>
-            <p class="text-sm text-gray-500">${review.date}</p>
-          </div>
-        </div>
-      </div>
-      <p class="text-sm text-gray-700">${review.content}</p>
-    `;
-    carousel.appendChild(card);
-  });
+  // Carousel state
+  let currentIndex = 0;
+  let visibleCards = 1;
+  const CARD_WIDTH = 310; // Width including margin/padding
+  const GAP = 24; // 6 units in Tailwind (6 * 4px = 24px)
 
-  function updateCounter() {
-    const totalPages = Math.ceil(reviews.length / visibleCards);
-    const currentPage = Math.floor(index / visibleCards) + 1;
-    countDisplay.textContent = `${currentPage} / ${totalPages}`;
+  // Initialize carousel
+  function initCarousel() {
+    calculateVisibleCards();
+    renderCards();
+    updateCarousel();
+    updateControls();
+    window.addEventListener("resize", handleResize);
   }
 
-  function moveCarousel(direction) {
-    const maxIndex = reviews.length - visibleCards;
-    index += direction;
+  // Create and append review cards
+  function renderCards() {
+    carousel.innerHTML = "";
 
-    if (index < 0) index = 0;
-    if (index > maxIndex) index = maxIndex;
+    reviews.forEach((review) => {
+      const card = document.createElement("div");
+      card.className =
+        "min-w-[280px] max-w-[320px] p-6 bg-white rounded-xl shadow-lg flex-shrink-0";
+      card.innerHTML = `
+        <div class="flex items-center gap-4 mb-4">
+          <img src="${review.image}" class="w-12 h-12 rounded-full" alt="${review.name}" loading="lazy" />
+          <div>
+            <p class="font-semibold text-gray-900">${review.name}</p>
+            <div class="flex items-center gap-2">
+              <p class="text-yellow-400">${review.stars}</p>
+              <p class="text-sm text-gray-500">${review.date}</p>
+            </div>
+          </div>
+        </div>
+        <p class="text-gray-700 text-base">${review.content}</p>
+      `;
+      carousel.appendChild(card);
+    });
+  }
 
-    carousel.style.transform = `translateX(-${index * cardWidth}px)`;
+  // Calculate visible cards based on screen width
+  function calculateVisibleCards() {
+    const screenWidth = window.innerWidth;
+    const totalCardWidth = CARD_WIDTH + GAP;
+    visibleCards = Math.min(
+      Math.max(1, Math.floor((screenWidth - 64) / totalCardWidth)), // 64px padding
+      reviews.length
+    );
+    updateCounter();
+    return visibleCards;
+  }
+
+  // Update counter display
+  function updateCounter() {
+    const totalVisible = Math.min(visibleCards, reviews.length);
+    const showing = Math.min(currentIndex + totalVisible, reviews.length);
+    countDisplay.textContent = `${showing} / ${reviews.length}`;
+  }
+
+  // Update carousel position
+  function updateCarousel() {
+    const offset = currentIndex * (CARD_WIDTH + GAP);
+    carousel.style.transform = `translateX(-${offset}px)`;
     updateCounter();
   }
 
-  // Initial counter setup
-  updateCounter();
-  window.moveCarousel = moveCarousel;
-});
+  // Update control buttons state
+  function updateControls() {
+    prevBtn.disabled = currentIndex === 0;
+    nextBtn.disabled = currentIndex >= reviews.length - visibleCards;
+  }
 
+  // Handle window resize
+  function handleResize() {
+    const prevVisibleCards = visibleCards;
+    calculateVisibleCards();
+
+    // Adjust currentIndex if needed after resize
+    if (currentIndex > reviews.length - visibleCards) {
+      currentIndex = Math.max(0, reviews.length - visibleCards);
+    }
+
+    updateCarousel();
+    updateControls();
+  }
+
+  // Move carousel in direction (1 for next, -1 for previous)
+  function moveCarousel(direction) {
+    currentIndex += direction;
+    currentIndex = Math.max(
+      0,
+      Math.min(currentIndex, reviews.length - visibleCards)
+    );
+    updateCarousel();
+    updateControls();
+  }
+
+  // Event listeners
+  prevBtn.addEventListener("click", () => moveCarousel(-1));
+  nextBtn.addEventListener("click", () => moveCarousel(1));
+
+  // Initialize
+  initCarousel();
+});
 // Passing results
 
 document.addEventListener("DOMContentLoaded", () => {
   const data = [
     {
-      image: "./public/pass-2.png",
-      regs: 76,
-      met: 76,
-      nav: 76,
-      rtr: 76,
-    },
-    {
-      image: "./public/pass-3.png",
+      image: "./public/pass-1.png",
       regs: 76,
       met: 76,
       nav: 76,
@@ -275,28 +329,56 @@ document.addEventListener("DOMContentLoaded", () => {
       rtr: 76,
     },
     {
-      image: "./public/pass-2.png",
+      image: "./public/pass-4.png",
       regs: 76,
       met: 76,
       nav: 76,
       rtr: 76,
     },
     {
-      image: "./public/pass-3.png",
+      image: "./public/pass-5.jpg",
       regs: 76,
       met: 76,
       nav: 76,
       rtr: 76,
     },
     {
-      image: "./public/pass-2.png",
+      image: "./public/pass-6.jpg",
       regs: 76,
       met: 76,
       nav: 76,
       rtr: 76,
     },
     {
-      image: "./public/pass-3.png",
+      image: "./public/pass-7.jpg",
+      regs: 76,
+      met: 76,
+      nav: 76,
+      rtr: 76,
+    },
+    {
+      image: "./public/pass-8.jpg",
+      regs: 76,
+      met: 76,
+      nav: 76,
+      rtr: 76,
+    },
+    {
+      image: "./public/pass-9.jpg",
+      regs: 76,
+      met: 76,
+      nav: 76,
+      rtr: 76,
+    },
+    {
+      image: "./public/pass-10.jpg",
+      regs: 76,
+      met: 76,
+      nav: 76,
+      rtr: 76,
+    },
+    {
+      image: "./public/pass-11.jpg",
       regs: 76,
       met: 76,
       nav: 76,

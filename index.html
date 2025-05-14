@@ -72,7 +72,7 @@
           class="flex flex-row gap-2 justify-center items-center cursor-pointer text-no-wrap"
         >
           <a
-            class="text-[15px] capitalize font-medium cursor-pointer text-center hover:text-primary"
+            class="text-[15px] capitalize font-medium text-[#A7E1FF] cursor-pointer text-center hover:text-primary"
             href="https://thepilot.in/"
             >Home</a
           >
@@ -227,8 +227,9 @@
       </div>
 
       <!-- Burger Menu -->
-      <div class="lg:hidden">
-        <button id="menu-btn" class="text-2xl">&#9776;</button>
+      <div id="menu-btn" class="lg:hidden p-4">
+        <img src="./public/menu-icon.svg" alt="" />
+        <!-- <button id="menu-btn" class="text-2xl">&#9776;</button> -->
       </div>
 
       <!-- Mobile Menu -->
@@ -401,7 +402,7 @@
       <div class="w-full h-full absolute top-0 left-0 -z-10">
         <img
           src="./public/banner-grid.png"
-          class="h-full w-full"
+          class="h-full w-full object-cover md:object-fill"
           alt=""
           srcset=""
         />
@@ -410,8 +411,11 @@
         class="grid grid-cols-12 lg:flex-row items-center min-h-[60vh] gap-4"
       >
         <div
-          class="col-span-12 lg:col-span-6 flex flex-col justify-center w-full p-10 md:p-10 lg:p-20 gap-10 lg:gap-6"
+          class="col-span-12 lg:col-span-6 flex flex-col justify-center w-full p-10 md:p-10 lg:p-20 gap-10 lg:gap-6 relative"
         >
+          <div
+            class="w-[250px] h-[150px] rounded-full bg-[#E8FFDA] absolute -bottom-10 left-[100px] blur-[100px] -z-10"
+          ></div>
           <div class="flex flex-col">
             <h1
               class="capitalize text-[#1c3867] helvatica-font text-5xl lg:text-7xl"
@@ -457,7 +461,10 @@
           class="ml-6 lg:ml-0 col-span-12 lg:col-span-6 flex justify-center relative items-center"
         >
           <div
-            class="w-[250px] h-[150px] rounded-full bg-[#B6E7FF] absolute top-10 left-[0px] blur-[250px] -z-10"
+            class="w-[250px] h-[150px] rounded-full bg-[#B6E7FF] absolute top-10 left-[0px] blur-[150px] -z-10"
+          ></div>
+          <div
+            class="w-[250px] h-[150px] rounded-full bg-[#FFEBB6] absolute -bottom-10 left-[100px] blur-[100px] -z-10"
           ></div>
 
           <div
@@ -478,6 +485,10 @@
                   <div
                     class="w-[70%] md:w-fit backdrop-blur rounded-xl bg-white/20 absolute bottom-10 left-1/2 -translate-x-1/2 px-4 py-3 lg:px-5 lg:py-4 flex flex-row items-center gap-2"
                   >
+                    <img
+                      class="aspect-[4/4] absolute w-14 h-14 md:w-20 md:h-20 bottom-0 -left-5 lg:-left-20 -translate-x-1/2"
+                      src="./public/aria-album.png"
+                    />
                     <div class="h-8 w-[5px] bg-[#1C3867] rounded"></div>
                     <h1
                       class="text-white font-semibold capitalize text-sm md:text-base lg:text-lg"
@@ -607,43 +618,231 @@
       <div
         class="mx-6 md:mx-14 lg:mx-20 max-w-[1400px] flex flex-row flex-wrap justify-center md:justify-around items-center gap-7"
       >
-        <div class="w-fit">
-          <img src="./public/banner-air-asia.svg" alt="" />
+        <div class="w-[22%] md:w-fit">
+          <img class="" src="./public/banner-air-asia.svg" alt="" />
         </div>
         <div class="w-fit hidden md:block">
           <img src="./public/divider-svg.svg" alt="" />
         </div>
-        <div class="w-fit">
-          <img src="./public/banner-air-india.svg" alt="" />
+        <div class="w-[22%] md:w-fit">
+          <img class="" src="./public/banner-air-india.svg" alt="" />
         </div>
         <div class="w-fit hidden md:block">
           <img src="./public/divider-svg.svg" alt="" />
         </div>
-        <div class="w-fit">
-          <img src="./public/banner-iso.svg" alt="" />
+        <div class="w-[22%] md:w-fit">
+          <img class="" src="./public/banner-iso.svg" alt="" />
         </div>
         <div class="w-fit hidden md:block">
           <img src="./public/divider-svg.svg" alt="" />
         </div>
-        <div class="w-fit">
-          <img src="./public/banner-edu-loans.svg" alt="" />
+        <div class="w-[22%] md:w-fit">
+          <img class="" src="./public/banner-edu-loans.svg" alt="" />
         </div>
         <div class="w-fit hidden md:block">
           <img src="./public/divider-svg.svg" alt="" />
         </div>
-        <div class="w-fit">
-          <img src="./public/banner-icici.png" alt="" />
+        <div class="w-[22%] md:w-fit">
+          <img class="" src="./public/banner-icici.png" alt="" />
         </div>
         <div class="w-fit hidden md:block">
           <img src="./public/divider-svg.svg" alt="" />
         </div>
-        <div class="w-fit">
-          <img src="./public/banner-thomas-cook.svg" alt="" />
+        <div class="w-[22%] md:w-fit">
+          <img class="" src="./public/banner-thomas-cook.svg" alt="" />
         </div>
       </div>
     </section>
     <!-- Partners For Leading Airlines -->
-    <section class="py-10 flex justify-center items-center w-full">
+    <section class="py-10 max-w-[1400px] grid place-items-center w-full">
+      <div class="w-full p-6 flex flex-col gap-10 justify-center items-center">
+        <div
+          class="mx-10 md:mx-14 lg:mx-20 flex flex-col w-full gap-2 justify-center items-center"
+        >
+          <h1
+            class="text-3xl md:text-4xl font-semibold capitalize text-[#1C3867] text-center"
+          >
+            Partners For Leading Airlines
+          </h1>
+          <h4
+            class="text-2xl mt-4 md:mt-0 font-semibold border-b-2 border-[#A7E1FF] lg:border-b-0 capitalize text-[#1C3867] text-center px-4 pb-2"
+          >
+            Trusted By
+          </h4>
+        </div>
+
+        <div
+          class="w-[86vw] lg:w-full flex overflow-x-scroll lg:overflow-x-hidden gap-4 lg:px-0"
+        >
+          <div
+            class="flex-shrink-0 w-[50vw] md:w-[300px] lg:w-[320px] bg-white rounded-2xl border md:border-2 border-[#F4F4F4] md:border-[#e0e0e0] p-1 md:p-3 flex flex-col items-center justify-start gap-1 md:gap-2 h-full lg:h-fit"
+          >
+            <div class="rounded-xl overflow-hidden">
+              <img
+                src="./public/partners-marigold-main.png"
+                class="w-full object-cover aspect-[4/4]"
+                alt=""
+              />
+            </div>
+            <div
+              class="hidden lg:block mt-2 w-[120px] md:w-[100px] h-12 grid place-items-center"
+            >
+              <img src="./public/partners-marigold.svg" alt="" />
+            </div>
+            <h1
+              class="text-sm md:text-lg lg:text-2xl font-semibold capitalize text-[#1C3867] text-center"
+            >
+              Marigold Cadet Pilot <br />
+              program
+            </h1>
+          </div>
+
+          <div
+            class="flex-shrink-0 w-[50vw] md:w-[300px] lg:w-[320px] bg-white rounded-2xl border md:border-2 border-[#F4F4F4] md:border-[#e0e0e0] p-1 md:p-3 flex flex-col items-center justify-start gap-1 md:gap-2 h-full lg:h-fit"
+          >
+            <div class="rounded-xl overflow-hidden relative">
+              <div
+                class="w-[90%] max-w-[300px] absolute bottom-3 left-1/2 -translate-x-1/2 p-1 md:p-2 border md:border-2 bg-white border-[#1C3867] flex flex-row gap-1 md:gap-2 items-center justify-center rounded-lg"
+              >
+                <img
+                  src="https://thepilot.in/wp-content/uploads/2024/05/Group-1000005202.png.webp"
+                  class="w-[40%]"
+                  alt=""
+                />
+                <img
+                  src="https://thepilot.in/wp-content/uploads/2024/05/c-1.png.webp"
+                  alt=""
+                  class="w-[40%]"
+                />
+              </div>
+              <img
+                src="./public/partners-air-india-main.png"
+                class="w-full object-cover aspect-[4/4]"
+                alt=""
+              />
+            </div>
+            <div
+              class="hidden lg:block mt-2 w-[120px] md:w-[100px] h-12 grid place-items-center"
+            >
+              <img src="./public/banner-air-india.svg" class="w-full" alt="" />
+            </div>
+            <h1
+              class="text-sm md:text-lg lg:text-2xl font-semibold capitalize text-[#1C3867] text-center"
+            >
+              Air India Cadet Pilot <br />
+              program
+            </h1>
+          </div>
+          <div
+            class="flex-shrink-0 w-[50vw] md:w-[300px] lg:w-[320px] bg-white rounded-2xl border md:border-2 border-[#F4F4F4] md:border-[#e0e0e0] p-1 md:p-3 flex flex-col items-center justify-start gap-1 md:gap-2 h-full lg:h-fit"
+          >
+            <div class="rounded-xl overflow-hidden">
+              <img
+                src="./public/partners-air-asia-main.png"
+                class="w-full object-cover aspect-[4/4]"
+                alt=""
+              />
+            </div>
+            <div
+              class="hidden lg:block mt-2 w-[120px] md:w-[100px] h-12 grid place-items-center"
+            >
+              <img src="./public/banner-air-asia.svg" class="w-full" alt="" />
+            </div>
+            <h1
+              class="text-sm md:text-lg lg:text-2xl font-semibold capitalize text-[#1C3867] text-center"
+            >
+              Air Asia Cadet Pilot <br />
+              program
+            </h1>
+          </div>
+
+          <!-- <div
+            class="flex-shrink-0 w-[50vw] md:w-[300px] bg-white rounded-2xl border-2 border-[#F4F4F4] md:border-[#e0e0e0] p-3 flex flex-col items-center justify-start gap-2 h-full lg:h-fit"
+          >
+            <div class="rounded-xl overflow-hidden">
+              <img
+                src="./public/partners-marigold-main.png"
+                class="w-full object-cover aspect-[4/4]"
+                alt=""
+              />
+            </div>
+            <div
+              class="mt-2 w-[120px] md:w-[100px] h-14 grid place-items-center"
+            >
+              <img src="./public/partners-marigold.svg" alt="" />
+            </div>
+            <h1
+              class="text-lg md:text-2xl font-semibold capitalize text-[#1C3867] text-center"
+            >
+              Marigold Cadet Pilot <br />
+              program
+            </h1>
+          </div>
+
+          <div
+            class="flex-shrink-0 w-[50vw] md:w-[300px] bg-white rounded-2xl border-2 border-[#F4F4F4] md:border-[#e0e0e0] p-3 flex flex-col items-center justify-start gap-2 h-full lg:h-fit"
+          >
+            <div class="rounded-xl overflow-hidden relative">
+              <div
+                class="w-[90%] h-fit rounded-lg p-2 border-2 bg-white border-[#1C3867] flex flex-row gap-2 items-center justify-center absolute bottom-3 left-1/2 -translate-x-1/2"
+              >
+                <img
+                  src="https://thepilot.in/wp-content/uploads/2024/05/Group-1000005202.png.webp"
+                  class="w-20 md:w-28"
+                  alt=""
+                />
+                <img
+                  src="https://thepilot.in/wp-content/uploads/2024/05/c-1.png.webp"
+                  alt=""
+                  class="w-20 md:w-28"
+                />
+              </div>
+              <img
+                src="./public/partners-air-india-main.png"
+                class="w-full object-cover aspect-[4/4]"
+                alt=""
+              />
+            </div>
+            <div
+              class="mt-2 w-[120px] md:w-[100px] h-14 grid place-items-center"
+            >
+              <img src="./public/banner-air-india.svg" class="w-full" alt="" />
+            </div>
+            <h1
+              class="text-lg md:text-2xl font-semibold capitalize text-[#1C3867] text-center"
+            >
+              Air India Cadet Pilot <br />
+              program
+            </h1>
+          </div>
+
+          <div
+            class="flex-shrink-0 w-[50vw] md:w-[300px] bg-white rounded-2xl border-2 border-[#F4F4F4] md:border-[#e0e0e0] p-3 flex flex-col items-center justify-start gap-2 h-full lg:h-fit"
+          >
+            <div class="rounded-xl overflow-hidden">
+              <img
+                src="./public/partners-air-asia-main.png"
+                class="w-full object-cover aspect-[4/4]"
+                alt=""
+              />
+            </div>
+            <div
+              class="mt-2 w-[120px] md:w-[100px] h-14 grid place-items-center"
+            >
+              <img src="./public/banner-air-asia.svg" class="w-full" alt="" />
+            </div>
+            <h1
+              class="text-lg md:text-2xl font-semibold capitalize text-[#1C3867] text-center"
+            >
+              Air Asia Cadet Pilot <br />
+              program
+            </h1>
+          </div> -->
+        </div>
+      </div>
+    </section>
+    <!-- Partners For Leading Airlines -->
+    <!-- <section class="py-10 flex justify-center items-center w-full">
       <div
         class="w-full max-w-[1400px] md:w-[90%] p-6 flex flex-col gap-10 justify-center items-center"
       >
@@ -652,7 +851,7 @@
         >
           <h1 class="heading-text">Partners For Leading Airlines</h1>
           <h4
-            class="text-2xl mt-4 md:mt-0 font-semibold capitalize text-[#1C3867] text-center"
+            class="text-2xl mt-4 md:mt-0 font-semibold capitalize text-[#1C3867] text-center pb-1 border-b-2 lg:border-b-0 border-[#A7E1FF] border-solid px-2"
           >
             Trusted By
           </h4>
@@ -748,7 +947,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <!-- Middle nav -->
     <section
       id="Pilot-Training"
@@ -977,20 +1176,20 @@
               </div>
             </a>
             <a
-              href="https://thepilot.in/pages/pilot-training-flying-school-spain"
+              href="https://thepilot.in/pages/pilot-training-flying-school-maldives"
               target="_blank"
               class="country-link col-span-12 md:col-span-6 lg:col-span-4 p-4 rounded-2xl bg-transparent cursor-pointer border-2 border-[#e7e7e7] flex flex-row justify-between items-center gap-4 text-[#1C3867]"
             >
               <div class="flex flex-row gap-2 items-center">
                 <div class="w-[40px]">
                   <img
-                    src="./public/flag-spain.png"
-                    class="w-full rounded-xl"
+                    src="./public/flag-maldives.svg"
+                    class="w-full rounded-md"
                     alt=""
                     srcset=""
                   />
                 </div>
-                <p class="text-xl font-normal capitalize">spain</p>
+                <p class="text-xl font-normal capitalize">maldives</p>
               </div>
               <div class="">
                 <img src="./public/arrow-cross-blue.svg" alt="" srcset="" />
@@ -1004,7 +1203,7 @@
               <div class="flex flex-row gap-2 items-center">
                 <div class="w-[40px]">
                   <img
-                    src="https://thepilot.in/wp-content/uploads/2022/06/india.svg"
+                    src="./public/flag-guide.png"
                     class="w-full rounded-xl"
                     alt=""
                     srcset=""
@@ -1062,12 +1261,38 @@
             </a>
           </div>
         </div>
-        <div
+        <!-- <div
           class="w-full p-4 text-[#1C3867] text-lg font-bold bg-[#A7E1FF57] rounded-xl block md:hidden capitalize"
         >
           Our Courses
+        </div> -->
+        <div class="flex md:hidden w-full pb-4 bg-[#A7E1FF33] rounded-xl p-4">
+          <div class="flex flex-col justify-between items-start w-full gap-4">
+            <p class="text-[#1C3867] text-base font-semibold">
+              Join the ranks of successful pilots. Enroll in our DGCA
+              <br class="hidden lg:block" />
+              Ground Classes today
+            </p>
+            <div
+              class="flex flex-row gap-3 items-center justify-center text-sm text-center"
+            >
+              <div
+                class="flex flex-row justify-center items-center gap-2 rounded-full bg-[#A7E1FF] py-4 px-6 cursor-pointer"
+              >
+                <p class="text-[#1C3867] uppercase font-semibold">
+                  View Course Details
+                </p>
+                <img src="./public/arrow-cross-blue.svg" alt="" srcset="" />
+              </div>
+              <div class="py-2 px-2 cursor-pointer">
+                <p class="text-[#1C3867] text-base uppercase font-semibold">
+                  contact us
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="hidden lg:grid grid-cols-12 gap-4 w-full lg:w-[90%]">
+        <div class="hidden lg:grid grid-cols-12 gap-4 w-full lg:w-[80%]">
           <div
             class="col-span-6 md:col-span-6 lg:col-span-4 p-4 rounded-2xl bg-[#2A4976] flex flex-col gap-3"
           >
@@ -1348,22 +1573,7 @@
             </div>
           </div>
         </div>
-        <div class="flex md:hidden w-full pb-4 bg-[#A7E1FF33] rounded-xl p-4">
-          <div class="flex flex-col justify-between items-start w-full gap-4">
-            <p class="text-[#1C3867] text-base font-semibold">
-              Join the ranks of successful pilots. Enroll in our DGCA <br />
-              Ground Classes today
-            </p>
-            <div
-              class="flex flex-row justify-center items-center gap-4 rounded-full bg-[#A7E1FF] py-4 px-6 cursor-pointer"
-            >
-              <p class="text-[#1C3867] text-base uppercase font-semibold">
-                View Course Details
-              </p>
-              <img src="./public/arrow-cross-blue.svg" alt="" srcset="" />
-            </div>
-          </div>
-        </div>
+
         <div class="bloc md:hidden w-full rounded-xl overflow-hidden bg-white">
           <img src="./public/gt-img.png" class="w-full rounded-lg" alt="" />
         </div>
@@ -1426,17 +1636,18 @@
               class="text-[#707070] text-base font-normal text-center capitalize"
             >
               We specialize in IndiGo Cadet Pilot Program Prep and Air India
-              Cadet Pilot Program Prep, ensuring you are fully prepared for
-              every stage.
+              Cadet Pilot Program Prep, ensuring you are
+              <br class="hidden lg:block" />
+              fully prepared for every stage.
             </p>
           </div>
           <div
             class="grid grid-cols-1 md:grid-cols-2 place-items-center gap-8 w-full md:w-fit mx-auto"
           >
             <div
-              class="h-full w-full md:w-fit col-span-1 flex flex-col bg-white border-2 border-[#DA0E29] rounded-2xl"
+              class="w-full md:w-fit col-span-1 flex flex-col bg-white border-2 border-[#DA0E29] rounded-2xl"
             >
-              <div class="p-4 pt-6 flex flex-col gap-12 h-full">
+              <div class="p-4 pt-6 flex flex-col gap-[60px] h-full">
                 <div class="h-8">
                   <img src="./public/banner-air-india.svg" alt="" srcset="" />
                 </div>
@@ -1491,7 +1702,7 @@
             <div
               class="h-full w-full md:w-fit col-span-1 flex flex-col bg-white border-2 border-[#2D72EC] rounded-2xl"
             >
-              <div class="p-4 pt-6 flex flex-col gap-12 h-full">
+              <div class="p-4 pt-6 flex flex-col gap-[60px] h-full">
                 <div class="h-8">
                   <img src="./public/cp-indigo.png" alt="" srcset="" />
                 </div>
@@ -1555,9 +1766,11 @@
     >
       <div class="max-w-[1400px] grid place-items-center w-full">
         <div
-          class="mx-6 md:mx-14 lg:mx-20 w-full p-6 flex flex-col gap-10 justify-center items-center"
+          class="mx-6 md:mx-14 lg:mx-16 w-full p-6 flex flex-col gap-10 justify-center items-center"
         >
-          <div class="flex flex-col gap-2 w-full justify-center items-center">
+          <div
+            class="flex flex-col gap-2 w-full h-full justify-center items-center"
+          >
             <div
               class="px-5 py-3 rounded-full bg-[#1C3867] text-white text-sm font-normal uppercase"
             >
@@ -1669,6 +1882,20 @@
                   Includes technical and HR interviews.
                 </p>
               </div>
+              <a
+                href="https://thepilot.in/pages/pilot-training-flying-school-usa"
+                target="_blank"
+                class="country-link col-span-12 md:col-span-6 lg:col-span-4 p-4 rounded-xl bg-[#1C3867] cursor-pointer border-2 border-[#e7e7e7] flex flex-row justify-between items-center gap-4 text-white"
+              >
+                <div class="flex flex-row gap-2 items-center">
+                  <p class="text-sm md:text-lg font-medium uppercase underline">
+                    learn more
+                  </p>
+                </div>
+                <div class="">
+                  <img src="./public/arrow-cross-white.svg" alt="" srcset="" />
+                </div>
+              </a>
             </div>
           </div>
         </div>
@@ -1681,7 +1908,7 @@
     >
       <div class="max-w-[1400px] grid place-items-center w-full">
         <div
-          class="mx-6 w-full md:mx-14 lg:mx-20 p-6 flex flex-col gap-10 justify-center items-center"
+          class="mx-6 w-full md:mx-12 lg:mx-20 p-6 flex flex-col gap-10 justify-center items-center"
         >
           <div
             class="flex flex-col lg:flex-row w-full gap-2 items-start lg:justify-between lg:items-end"
@@ -1729,7 +1956,7 @@
                     learn more
                     <img src="./public/arrow-right.svg" alt="" />
                   </span>
-                  <div><img src="./public/sim-airbus-logo.png" alt="" /></div>
+                  <div><img src="./public/sim-airbus-logo.svg" alt="" /></div>
                 </a>
               </div>
             </div>
@@ -1758,7 +1985,7 @@
                     learn more
                     <img src="./public/arrow-right.svg" alt="" />
                   </a>
-                  <div><img src="./public/sim-boieng-logo.png" alt="" /></div>
+                  <div><img src="./public/sim-boieng-logo.svg" alt="" /></div>
                 </div>
               </div>
             </div>
@@ -1768,7 +1995,7 @@
     </section>
     <!-- Students review -->
     <div class="bg-[#E7E9F57A] flex w-full justify-center items-center py-10">
-      <div class="w-[90vw] my-6">
+      <div class="w-[90vw] max-w-6xl my-6">
         <h2 class="text-3xl font-bold text-center mb-2">Student reviews</h2>
         <p class="text-center text-gray-600 mb-6">
           ThePilot <span class="text-yellow-400">4.9 ★★★★★</span> (82)
@@ -1778,9 +2005,9 @@
         <div class="overflow-hidden relative">
           <div
             id="carousel"
-            class="flex transition-transform duration-500 ease-in-out space-x-4"
+            class="flex transition-transform duration-500 ease-in-out gap-6"
           >
-            <!-- injected -->
+            <!-- Cards will be injected here by JavaScript -->
           </div>
 
           <!-- showing numbers -->
@@ -1792,14 +2019,15 @@
           </div>
           <div class="flex justify-center mt-4 mb-2">
             <button
-              onclick="moveCarousel(-1)"
-              class="bg-white px-6 py-2 rounded-l-full shadow hover:bg-gray-100"
+              id="carousel-prev"
+              class="bg-white px-6 py-2 rounded-l-full shadow hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed"
+              disabled
             >
               ←
             </button>
             <button
-              onclick="moveCarousel(1)"
-              class="bg-white px-6 py-2 rounded-r-full shadow hover:bg-gray-100"
+              id="carousel-next"
+              class="bg-white px-6 py-2 rounded-r-full shadow hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed"
             >
               →
             </button>
@@ -2151,7 +2379,7 @@
       <div class="w-full relative max-w-[1400px]">
         <img
           src="./public/shop-bg.png"
-          class="md:w-100 h-[50vh] md:h-full object-cover lg:object-fill"
+          class="md:w-100 h-[40vh] md:h-full object-cover object-[right] md:object-center lg:object-fill"
           alt=""
         />
         <div
@@ -2859,16 +3087,28 @@
     </section>
     <!-- footer -->
     <footer
-      class="bg-[#1C3867] overflow-hidden px-6 pt-10 md:px-16 lg:px-28 pb-6 md:mb-6 w-full md:w-[96vw] md:mx-auto md:rounded-2xl relative"
+      class="bg-[#1C3867] overflow-hidden px-6 pt-10 md:px-16 lg:px-20 pb-6 md:mb-6 w-full md:w-[96vw] md:mx-auto md:rounded-2xl relative"
     >
-      <div class="absolute bottom-0 w-full right-0 pointer-events-none">
-        <img src="./public/footer-vector.svg" class="w-full h-full" alt="" />
+      <div
+        class="absolute bottom-0 w-full h-full right-0 z-10 pointer-events-none"
+      >
+        <img
+          src="./public/footer-vector.svg"
+          class="w-full h-full object-cover lg:object-fill"
+          alt=""
+        />
       </div>
-      <div class="absolute bottom-0 w-full right-0 pointer-events-none">
-        <img src="./public/footer-grid.svg" class="w-full h-full" alt="" />
+      <div
+        class="absolute bottom-0 w-full h-full right-0 z-0 pointer-events-none"
+      >
+        <img
+          src="./public/footer-grid.svg"
+          class="w-full h-full object-cover lg:object-fill"
+          alt=""
+        />
       </div>
 
-      <div class="grid grid-cols-12 mt-10 gap-6 z-2 w-full h-full">
+      <div class="grid grid-cols-12 mt-10 gap-6 z-10 w-full h-full">
         <div
           class="col-span-12 md:col-span-6 lg:col-span-4 flex flex-col gap-4 items-start"
         >
@@ -2916,7 +3156,9 @@
           <div class="text-[16px] md:text-[22px] text-[#A7E1FF] flex flex-col">
             Quick Link
           </div>
-          <ul class="flex flex-col gap-4 md:gap-3 lg:gap-4 text-white">
+          <ul
+            class="flex flex-col gap-4 md:gap-3 lg:gap-4 text-white text-[15px]"
+          >
             <li>
               <a
                 href="https://thepilot.in/pages/how-to-become-a-pilot/"
@@ -2973,7 +3215,9 @@
           <div class="text-[16px] md:text-[22px] text-[#A7E1FF] flex flex-col">
             Pilot Training
           </div>
-          <ul class="flex flex-col gap-4 md:gap-3 lg:gap-4 text-white">
+          <ul
+            class="flex flex-col gap-4 md:gap-3 lg:gap-4 text-white text-[15px]"
+          >
             <li>
               <a
                 href="https://thepilot.in/pages/pilot-training-flying-school-usa"
