@@ -153,12 +153,12 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
   const reviews = [
     {
-      name: "Ravi Sharma",
+      name: "Sid g",
       image: "https://randomuser.me/api/portraits/men/32.jpg",
       stars: "★★★★★",
-      date: "3 days ago",
+      date: "2024-07-15",
       content:
-        "Completely beautiful website and amazing support! This is my second website from this author and I love both of the sites so much and she has helped me so well when I needed it!",
+        "The pilot really guides you well from getting a visa to getting an admission in your choice of flying school and all the processes very smoothly and without facing difficulties . Absolutely recommend their guidance !",
     },
     {
       name: "Priya Verma",
@@ -379,6 +379,27 @@ document.addEventListener("DOMContentLoaded", () => {
     },
     {
       image: "./public/pass-11.jpg",
+      regs: 76,
+      met: 76,
+      nav: 76,
+      rtr: 76,
+    },
+    {
+      image: "./public/pass-12.jpg",
+      regs: 76,
+      met: 76,
+      nav: 76,
+      rtr: 76,
+    },
+    {
+      image: "./public/pass-13.jpg",
+      regs: 76,
+      met: 76,
+      nav: 76,
+      rtr: 76,
+    },
+    {
+      image: "./public/pass-14.jpg",
       regs: 76,
       met: 76,
       nav: 76,

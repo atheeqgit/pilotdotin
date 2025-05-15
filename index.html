@@ -411,7 +411,7 @@
         class="grid grid-cols-12 lg:flex-row items-center min-h-[60vh] gap-4"
       >
         <div
-          class="col-span-12 lg:col-span-6 flex flex-col justify-center w-full p-10 md:p-10 lg:p-20 gap-10 lg:gap-6 relative"
+          class="col-span-12 lg:col-span-6 flex flex-col justify-center w-full p-8 md:p-10 lg:p-20 gap-10 lg:gap-6 relative"
         >
           <div
             class="w-[250px] h-[150px] rounded-full bg-[#E8FFDA] absolute -bottom-10 left-[100px] blur-[100px] -z-10"
@@ -439,10 +439,10 @@
               href="https://thepilot.in/pages/how-to-become-a-pilot/"
               class="rounded-full bg-[#1c3867] text-white text-center px-8 py-4 border-2 border-solid border-[#1c3867] uppercase text-base font-medium cursor-pointer"
             >
-              HOW To become a pilot?
+              How To become a pilot?
             </a>
             <a
-              href="#"
+              href="https://thepilot.in/pages/how-to-become-a-pilot/"
               class="rounded-full bg-[#CAE7F633] text-[#1c3867] text-center px-8 py-4 border-2 border-solid border-[#1c3867] uppercase text-base font-medium cursor-pointer"
             >
               learn more
@@ -618,41 +618,119 @@
       <div
         class="mx-6 md:mx-14 lg:mx-20 max-w-[1400px] flex flex-row flex-wrap justify-center md:justify-around items-center gap-7"
       >
-        <div class="w-[22%] md:w-fit">
-          <img class="" src="./public/banner-air-asia.svg" alt="" />
+        <div class="w-22 md:w-fit">
+          <img
+            class="w-full h-auto object-contain"
+            loading="lazy"
+            src="./public/banner-air-asia.svg"
+            alt=""
+          />
         </div>
-        <div class="w-fit hidden md:block">
+        <div class="">
           <img src="./public/divider-svg.svg" alt="" />
         </div>
-        <div class="w-[22%] md:w-fit">
-          <img class="" src="./public/banner-air-india.svg" alt="" />
+        <div class="w-22 md:w-fit">
+          <img
+            class="w-full h-auto object-contain"
+            src="./public/banner-air-india.svg"
+            alt=""
+          />
         </div>
-        <div class="w-fit hidden md:block">
-          <img src="./public/divider-svg.svg" alt="" />
+
+        <div class="hidden md:block w-fit">
+          <img class="hidden md:block" src="./public/divider-svg.svg" alt="" />
         </div>
-        <div class="w-[22%] md:w-fit">
-          <img class="" src="./public/banner-iso.svg" alt="" />
+        <div class="hidden md:block w-[22%] md:w-fit">
+          <img class="hidden md:block" src="./public/banner-iso.svg" alt="" />
         </div>
-        <div class="w-fit hidden md:block">
-          <img src="./public/divider-svg.svg" alt="" />
+        <div class="hidden md:block w-fit">
+          <img class="hidden md:block" src="./public/divider-svg.svg" alt="" />
         </div>
-        <div class="w-[22%] md:w-fit">
-          <img class="" src="./public/banner-edu-loans.svg" alt="" />
+        <div class="hidden md:block w-[22%] md:w-fit">
+          <img
+            class="hidden md:block"
+            src="./public/banner-edu-loans.svg"
+            alt=""
+          />
         </div>
-        <div class="w-fit hidden md:block">
-          <img src="./public/divider-svg.svg" alt="" />
+        <div class="hidden md:block w-fit">
+          <img class="hidden md:block" src="./public/divider-svg.svg" alt="" />
         </div>
-        <div class="w-[22%] md:w-fit">
-          <img class="" src="./public/banner-icici.png" alt="" />
+        <div class="hidden md:block w-[22%] md:w-fit">
+          <img class="hidden md:block" src="./public/banner-icici.png" alt="" />
         </div>
-        <div class="w-fit hidden md:block">
-          <img src="./public/divider-svg.svg" alt="" />
+        <div class="hidden md:block w-fit">
+          <img class="hidden md:block" src="./public/divider-svg.svg" alt="" />
         </div>
-        <div class="w-[22%] md:w-fit">
-          <img class="" src="./public/banner-thomas-cook.svg" alt="" />
+        <div class="hidden md:block w-[22%] md:w-fit">
+          <img
+            class="hidden md:block"
+            src="./public/banner-thomas-cook.svg"
+            alt=""
+          />
         </div>
       </div>
     </section>
+    <!-- Mobile Partner Logos Carousel -->
+    <div class="w-full py-4 mt-2 bg-[#A7E1FF26] md:hidden">
+      <div class="w-[94vw] mx-auto">
+        <!-- Scrollable container with proper semantics -->
+        <div
+          class="flex overflow-x-auto gap-6 py-2 px-4 scrollbar-hide"
+          role="list"
+          aria-label="Our trusted partners"
+        >
+          <!-- Partner 1 -->
+          <div class="flex-shrink-0 w-22" role="listitem">
+            <img
+              src="./public/banner-iso.svg"
+              alt="ISO Certified"
+              class="w-full h-auto object-contain"
+              loading="lazy"
+            />
+          </div>
+
+          <!-- Divider -->
+          <img src="./public/divider-svg.svg" alt="" />
+
+          <!-- Partner 2 -->
+          <div class="flex-shrink-0 w-22" role="listitem">
+            <img
+              src="./public/banner-edu-loans.svg"
+              alt="Education Loans Partner"
+              class="w-full h-auto object-contain"
+              loading="lazy"
+            />
+          </div>
+
+          <!-- Divider -->
+          <img src="./public/divider-svg.svg" alt="" />
+
+          <!-- Partner 3 -->
+          <div class="flex-shrink-0 w-22" role="listitem">
+            <img
+              src="./public/banner-icici.png"
+              alt="ICICI Bank Partnership"
+              class="w-full h-auto object-contain"
+              loading="lazy"
+            />
+          </div>
+
+          <!-- Divider -->
+          <img src="./public/divider-svg.svg" alt="" />
+
+          <!-- Partner 4 -->
+          <div class="flex-shrink-0 w-22" role="listitem">
+            <img
+              src="./public/banner-thomas-cook.svg"
+              alt="Thomas Cook Partnership"
+              class="w-full h-auto object-contain"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Partners For Leading Airlines -->
     <section class="py-10 max-w-[1400px] grid place-items-center w-full">
       <div class="w-full p-6 flex flex-col gap-10 justify-center items-center">
@@ -672,7 +750,7 @@
         </div>
 
         <div
-          class="w-[86vw] lg:w-full flex overflow-x-scroll lg:overflow-x-hidden gap-4 lg:px-0"
+          class="w-[90vw] lg:w-full flex overflow-x-scroll lg:overflow-x-hidden gap-4 lg:px-0"
         >
           <div
             class="flex-shrink-0 w-[50vw] md:w-[300px] lg:w-[320px] bg-white rounded-2xl border md:border-2 border-[#F4F4F4] md:border-[#e0e0e0] p-1 md:p-3 flex flex-col items-center justify-start gap-1 md:gap-2 h-full lg:h-fit"
@@ -1274,7 +1352,7 @@
               Ground Classes today
             </p>
             <div
-              class="flex flex-row gap-3 items-center justify-center text-sm text-center"
+              class="flex flex-row gap-3 items-center justify-center text-xs md:text-base text-center"
             >
               <div
                 class="flex flex-row justify-center items-center gap-2 rounded-full bg-[#A7E1FF] py-4 px-6 cursor-pointer"
@@ -1282,12 +1360,15 @@
                 <p class="text-[#1C3867] uppercase font-semibold">
                   View Course Details
                 </p>
-                <img src="./public/arrow-cross-blue.svg" alt="" srcset="" />
+                <img
+                  src="./public/arrow-cross-blue.svg"
+                  class="w-4 md:w-fit"
+                  alt=""
+                  srcset=""
+                />
               </div>
               <div class="py-2 px-2 cursor-pointer">
-                <p class="text-[#1C3867] text-base uppercase font-semibold">
-                  contact us
-                </p>
+                <p class="text-[#1C3867] uppercase font-semibold">contact us</p>
               </div>
             </div>
           </div>
@@ -1304,31 +1385,43 @@
             <ul class="flex flex-col justify-start items-start gap-2">
               <li class="flex flex-row gap-2 justify-start items-center">
                 <div class="h-2 w-2 rounded-full bg-[#A7E1FF]"></div>
-                <p class="text-base capitalize font-medium text-white">
+                <p
+                  class="text-sm md:text-base capitalize font-medium text-white"
+                >
                   Air Navigation
                 </p>
               </li>
               <li class="flex flex-row gap-2 justify-start items-center">
                 <div class="h-2 w-2 rounded-full bg-[#A7E1FF]"></div>
-                <p class="text-base capitalize font-medium text-white">
+                <p
+                  class="text-sm md:text-base capitalize font-medium text-white"
+                >
                   Air Regulations
                 </p>
               </li>
               <li class="flex flex-row gap-2 justify-start items-center">
                 <div class="h-2 w-2 rounded-full bg-[#A7E1FF]"></div>
-                <p class="text-base capitalize font-medium text-white">
+                <p
+                  class="text-sm md:text-base capitalize font-medium text-white"
+                >
                   Air Meteorology
                 </p>
               </li>
               <li class="flex flex-row gap-2 justify-start items-center">
                 <div class="h-2 w-2 rounded-full bg-[#A7E1FF]"></div>
-                <p class="text-base capitalize font-medium text-white">
+                <p
+                  class="text-sm md:text-base capitalize font-medium text-white"
+                >
                   Technical General
                 </p>
               </li>
               <li class="flex flex-row gap-2 justify-start items-center">
                 <div class="h-2 w-2 rounded-full bg-[#A7E1FF]"></div>
-                <p class="text-base capitalize font-medium text-white">RTR</p>
+                <p
+                  class="text-sm md:text-base capitalize font-medium text-white"
+                >
+                  RTR
+                </p>
               </li>
             </ul>
             <div
@@ -1346,7 +1439,7 @@
               DGCA CPL - Abroad
             </h1>
             <ul
-              class="flex flex-col justify-start items-start gap-2 p-2 md:p-4 text-base capitalize font-medium text-white md:text-[#1C3867]"
+              class="flex flex-col justify-start items-start gap-2 p-2 md:p-4 texttext-sm md:-base capitalize font-medium text-white md:text-[#1C3867]"
             >
               <li class="flex flex-row gap-2 justify-start items-center">
                 <div class="h-2 w-2 rounded-full bg-[#A7E1FF]"></div>
@@ -1379,7 +1472,7 @@
                 Single Programs
               </h1>
               <ul
-                class="flex flex-col justify-start items-start gap-2 p-2 md:p-4 text-base capitalize font-medium text-white"
+                class="flex flex-col justify-start items-start gap-2 p-2 md:p-4 texttext-sm md:-base capitalize font-medium text-white"
               >
                 <li class="flex flex-row gap-2 justify-start items-center">
                   <div class="h-2 w-2 rounded-full bg-[#A7E1FF]"></div>
@@ -1404,7 +1497,7 @@
                 DGCA Exam Crash Courses
               </h1>
               <ul
-                class="flex flex-col justify-start items-start gap-2 p-2 md:p-4 text-base capitalize font-medium text-white"
+                class="flex flex-col justify-start items-start gap-2 p-2 md:p-4 texttext-sm md:-base capitalize font-medium text-white"
               >
                 <li class="flex flex-row gap-2 justify-start items-center">
                   <div class="h-2 w-2 rounded-full bg-[#A7E1FF]"></div>
@@ -1431,7 +1524,7 @@
                 Single Programs
               </h1>
               <ul
-                class="flex flex-col justify-start items-start gap-2 p-2 md:p-4 text-base capitalize font-medium text-white"
+                class="flex flex-col justify-start items-start gap-2 p-2 md:p-4 texttext-sm md:-base capitalize font-medium text-white"
               >
                 <li class="flex flex-row gap-2 justify-start items-center">
                   <div class="h-2 w-2 rounded-full bg-[#A7E1FF]"></div>
@@ -1481,31 +1574,43 @@
               <ul class="flex flex-col justify-start items-start gap-2">
                 <li class="flex flex-row gap-2 justify-start items-center">
                   <div class="h-2 w-2 rounded-full bg-[#A7E1FF]"></div>
-                  <p class="text-base capitalize font-medium text-white">
+                  <p
+                    class="text-sm md:text-base capitalize font-medium text-white"
+                  >
                     Air Navigation
                   </p>
                 </li>
                 <li class="flex flex-row gap-2 justify-start items-center">
                   <div class="h-2 w-2 rounded-full bg-[#A7E1FF]"></div>
-                  <p class="text-base capitalize font-medium text-white">
+                  <p
+                    class="text-sm md:text-base capitalize font-medium text-white"
+                  >
                     Air Regulations
                   </p>
                 </li>
                 <li class="flex flex-row gap-2 justify-start items-center">
                   <div class="h-2 w-2 rounded-full bg-[#A7E1FF]"></div>
-                  <p class="text-base capitalize font-medium text-white">
+                  <p
+                    class="text-sm md:text-base capitalize font-medium text-white"
+                  >
                     Air Meteorology
                   </p>
                 </li>
                 <li class="flex flex-row gap-2 justify-start items-center">
                   <div class="h-2 w-2 rounded-full bg-[#A7E1FF]"></div>
-                  <p class="text-base capitalize font-medium text-white">
+                  <p
+                    class="text-sm md:text-base capitalize font-medium text-white"
+                  >
                     Technical General
                   </p>
                 </li>
                 <li class="flex flex-row gap-2 justify-start items-center">
                   <div class="h-2 w-2 rounded-full bg-[#A7E1FF]"></div>
-                  <p class="text-base capitalize font-medium text-white">RTR</p>
+                  <p
+                    class="text-sm md:text-base capitalize font-medium text-white"
+                  >
+                    RTR
+                  </p>
                 </li>
               </ul>
             </div>
@@ -1515,7 +1620,9 @@
               <ul class="flex flex-col justify-start items-start gap-2">
                 <li class="flex flex-row gap-2 justify-start items-center">
                   <div class="h-2 w-2 rounded-full bg-[#A7E1FF]"></div>
-                  <p class="text-base capitalize font-medium text-white">
+                  <p
+                    class="text-sm md:text-base capitalize font-medium text-white"
+                  >
                     DGCA Exam Crash Course
                   </p>
                 </li>
@@ -1532,7 +1639,7 @@
                 DGCA CPL - Abroad
               </h1>
               <ul
-                class="flex flex-col justify-start items-start gap-2 text-base capitalize font-medium text-white md:text-[#1C3867]"
+                class="flex flex-col justify-start items-start gap-2text-sm md: text-base capitalize font-medium text-white md:text-[#1C3867]"
               >
                 <li class="flex flex-row gap-2 justify-start items-center">
                   <div class="h-2 w-2 rounded-full bg-[#A7E1FF]"></div>
@@ -1555,7 +1662,7 @@
                 Single Programs
               </h1>
               <ul
-                class="flex flex-col justify-start items-start gap-2 text-base capitalize font-medium text-white"
+                class="flex flex-col justify-start items-start gap-2text-sm md: text-base capitalize font-medium text-white"
               >
                 <li class="flex flex-row gap-2 justify-start items-center">
                   <div class="h-2 w-2 rounded-full bg-[#A7E1FF]"></div>
@@ -1590,9 +1697,9 @@
             outstanding <br />
             pass results
           </h1>
-          <div class="relative w-[80vw] lg:w-[60vw]">
+          <div class="relative w-[90vw] lg:w-[65vw]">
             <div
-              class="h-full w-[20%] absolute bg-gradient-to-r from-[#F8FDFF] to-[#F8FDFF00]"
+              class="h-full w-[20%] hidden md:block absolute bg-gradient-to-r from-[#F8FDFF] to-[#F8FDFF00]"
             ></div>
             <div
               id="cardCarousel"
@@ -1679,7 +1786,7 @@
                   </ul>
                 </div>
                 <a
-                  href="https://thepilot.in/pages/air-india-cadet-pilot-program/"
+                  href="https://api.whatsapp.com/send/?phone=917738901234&text=Hi%2C+I+would+like+to+know+more+about+air+india+Cadet+Pilot+Preparation&type=phone_number&app_absent=0"
                   class="bg-[#DA0E29] cursor-pointer rounded-lg flex flex-row gap-2 p-2 w-full justify-center items-center mt-auto"
                 >
                   <h1
@@ -1734,7 +1841,7 @@
                   </ul>
                 </div>
                 <a
-                  href="https://thepilot.in/pages/indigo-cadet-pilot-program/"
+                  href="https://api.whatsapp.com/send/?phone=917738901234&text=Hi%2C+I+would+like+to+know+more+about+indigo+Cadet+Pilot+Preparation&type=phone_number&app_absent=0"
                   class="bg-[#2D72EC] cursor-pointer rounded-lg flex flex-row gap-2 p-2 w-full justify-center items-center mt-auto"
                 >
                   <h1
@@ -1883,7 +1990,7 @@
                 </p>
               </div>
               <a
-                href="https://thepilot.in/pages/pilot-training-flying-school-usa"
+                href="https://api.whatsapp.com/send/?phone=917738901234&text=Hi%2C+I+would+like+to+know+more+about+JFO+Airline+Preparation&type=phone_number&app_absent=0"
                 target="_blank"
                 class="country-link col-span-12 md:col-span-6 lg:col-span-4 p-4 rounded-xl bg-[#1C3867] cursor-pointer border-2 border-[#e7e7e7] flex flex-row justify-between items-center gap-4 text-white"
               >
@@ -1926,7 +2033,7 @@
             >
               An Aircraft Type Rating is a certification that pilots must obtain
               to
-              <br />
+              <br class="hidden lg:block" />
               operate certain types of aircraft.
             </p>
           </div>
@@ -1998,7 +2105,7 @@
       <div class="w-[90vw] max-w-6xl my-6">
         <h2 class="text-3xl font-bold text-center mb-2">Student reviews</h2>
         <p class="text-center text-gray-600 mb-6">
-          ThePilot <span class="text-yellow-400">4.9 ★★★★★</span> (82)
+          ThePilot <span class="text-yellow-400">4.9 ★★★★★</span> (262)
         </p>
 
         <!-- Review Cards Container -->
@@ -2184,7 +2291,7 @@
         <div class="flex flex-col w-full gap-2 justify-between">
           <h1 class="heading-text">Cadet Pilot programs</h1>
         </div>
-        <div class="grid grid-cols-12 gap-4">
+        <div class="grid grid-cols-12 gap-4 w-[90%]">
           <div
             class="col-span-12 lg:col-span-6 flex flex-col relative p-4 md:-4 md:p-6 lg:p-8 rounded-xl border-2 border-[#DA0E29] gap-2"
           >
@@ -2333,7 +2440,7 @@
             </p>
           </div>
           <a
-            href="https://thepilot.in/pages/how-to-become-a-pilot/"
+            href="https://api.whatsapp.com/send/?phone=917738901234&text=Hi%2C+I+would+like+to+know+more+about+Education+Loans&type=phone_number&app_absent=0"
             target="_blank"
             class="rounded-full bg-[#1c3867] text-white text-center px-8 py-4 border-2 border-solid border-[#A7E1FF] flex flex-row items-center gap-2 uppercase text-base font-medium cursor-pointer w-fit"
           >
@@ -2375,7 +2482,7 @@
       </div>
     </section>
     <!-- pilot shop -->
-    <section class="py-10 mb-40 w-full flex justify-center items-start">
+    <section class="hidden py-10 mb-40 w-full flex justify-center items-start">
       <div class="w-full relative max-w-[1400px]">
         <img
           src="./public/shop-bg.png"
@@ -2677,7 +2784,7 @@
           <!-- Question and Answer -->
           <div class="w-[95%] flex flex-col gap-4">
             <h1
-              class="faq-question capitalize text-[#1c3867] font-semibold text-lg md:text-2xl text-left"
+              class="faq-question capitalize text-[#1c3867] font-semibold text-base md:text-lg lg:text-2xl text-left"
             >
               What is the minimum required qualification to commence Pilot
               training?
@@ -2686,7 +2793,7 @@
               class="faq-answer-wrapper overflow-hidden transition-all duration-500 ease-in-out max-h-0"
             >
               <p
-                class="faq-answer px-4 border-l-2 border-[#1C3867] w-full text-lg text-[#A5A5A5] py-2"
+                class="faq-answer px-4 border-l-2 border-[#1C3867] w-full text-sm md:text-lg text-[#A5A5A5] py-2"
               >
                 Minimum qualification required to commence Pilot training is
                 10+2 with Maths and Physics. If you haven’t done Maths and
@@ -2715,7 +2822,7 @@
           <!-- Question and Answer -->
           <div class="w-[95%] flex flex-col gap-4">
             <h1
-              class="faq-question capitalize text-[#1c3867] font-semibold text-lg md:text-2xl text-left"
+              class="faq-question capitalize text-[#1c3867] font-semibold text-base md:text-lg lg:text-2xl text-left"
             >
               How long does it take to train to become a Pilot?
             </h1>
@@ -2723,7 +2830,7 @@
               class="faq-answer-wrapper overflow-hidden transition-all duration-500 ease-in-out max-h-0"
             >
               <p
-                class="faq-answer px-4 border-l-2 border-[#1C3867] w-full text-lg text-[#A5A5A5] py-2"
+                class="faq-answer px-4 border-l-2 border-[#1C3867] w-full text-sm md:text-lg text-[#A5A5A5] py-2"
               >
                 Becoming a Commercial Pilot typically takes 12 to 18 months,
                 depending on factors like weather, training pace, and institute
@@ -2749,7 +2856,7 @@
           <!-- Question and Answer -->
           <div class="w-[95%] flex flex-col gap-4">
             <h1
-              class="faq-question capitalize text-[#1c3867] font-semibold text-lg md:text-2xl text-left"
+              class="faq-question capitalize text-[#1c3867] font-semibold text-base md:text-lg lg:text-2xl text-left"
             >
               What are the regulatory requirements to obtain a Commercial Pilot
               Licence (CPL)?
@@ -2758,7 +2865,7 @@
               class="faq-answer-wrapper overflow-hidden transition-all duration-500 ease-in-out max-h-0"
             >
               <div
-                class="faq-answer px-4 border-l-2 border-[#1C3867] w-full text-lg text-[#A5A5A5] py-2"
+                class="faq-answer px-4 border-l-2 border-[#1C3867] w-full text-sm md:text-lg text-[#A5A5A5] py-2"
               >
                 <p>
                   To obtain a Commercial Pilot Licence, most aviation
@@ -2805,7 +2912,7 @@
           <!-- Question and Answer -->
           <div class="w-[95%] flex flex-col gap-4">
             <h1
-              class="faq-question capitalize text-[#1c3867] font-semibold text-lg md:text-2xl text-left"
+              class="faq-question capitalize text-[#1c3867] font-semibold text-base md:text-lg lg:text-2xl text-left"
             >
               Can I become a Pilot with Commerce or Arts background?
             </h1>
@@ -2813,7 +2920,7 @@
               class="faq-answer-wrapper overflow-hidden transition-all duration-500 ease-in-out max-h-0"
             >
               <p
-                class="faq-answer px-4 border-l-2 border-[#1C3867] w-full text-lg text-[#A5A5A5] py-2"
+                class="faq-answer px-4 border-l-2 border-[#1C3867] w-full text-sm md:text-lg text-[#A5A5A5] py-2"
               >
                 Students from Commerce or Arts streams are eligible to become
                 pilots. The only academic requirement is that you must have
@@ -2842,7 +2949,7 @@
           <!-- Question and Answer -->
           <div class="w-[95%] flex flex-col gap-4">
             <h1
-              class="faq-question capitalize text-[#1c3867] font-semibold text-lg md:text-2xl text-left"
+              class="faq-question capitalize text-[#1c3867] font-semibold text-base md:text-lg lg:text-2xl text-left"
             >
               What are the medical requirements to become a pilot?
             </h1>
@@ -2850,7 +2957,7 @@
               class="faq-answer-wrapper overflow-hidden transition-all duration-500 ease-in-out max-h-0"
             >
               <p
-                class="faq-answer px-4 border-l-2 border-[#1C3867] w-full text-lg text-[#A5A5A5] py-2"
+                class="faq-answer px-4 border-l-2 border-[#1C3867] w-full text-sm md:text-lg text-[#A5A5A5] py-2"
               >
                 Pilots need to clear the DGCA Class 2 Medical to start training
                 and Class 1 Medical to hold a CPL. The medicals check for
@@ -2876,7 +2983,7 @@
           <!-- Question and Answer -->
           <div class="w-[95%] flex flex-col gap-4">
             <h1
-              class="faq-question capitalize text-[#1c3867] font-semibold text-lg md:text-2xl text-left"
+              class="faq-question capitalize text-[#1c3867] font-semibold text-base md:text-lg lg:text-2xl text-left"
             >
               What are the minimum requirements to get a pilot job?
             </h1>
@@ -2885,7 +2992,7 @@
               class="faq-answer-wrapper overflow-hidden transition-all duration-500 ease-in-out max-h-0"
             >
               <div
-                class="faq-answer px-4 border-l-2 border-[#1C3867] w-full text-lg text-[#A5A5A5] py-2"
+                class="faq-answer px-4 border-l-2 border-[#1C3867] w-full text-sm md:text-lg text-[#A5A5A5] py-2"
               >
                 <p>To apply for airline pilot jobs, you need:</p>
                 <ul class="list-disc mt-2 pl-6 text-[#A5A5A5]">
@@ -2936,7 +3043,7 @@
           <!-- Question and Answer -->
           <div class="w-[95%] flex flex-col gap-4">
             <h1
-              class="faq-question capitalize text-[#1c3867] font-semibold text-lg md:text-2xl text-left"
+              class="faq-question capitalize text-[#1c3867] font-semibold text-base md:text-lg lg:text-2xl text-left"
             >
               How to start a Commercial Pilot Training course?
             </h1>
@@ -2945,7 +3052,7 @@
               class="faq-answer-wrapper overflow-hidden transition-all duration-500 ease-in-out max-h-0"
             >
               <div
-                class="faq-answer px-4 border-l-2 border-[#1C3867] w-full text-lg text-[#A5A5A5] py-2"
+                class="faq-answer px-4 border-l-2 border-[#1C3867] w-full text-sm md:text-lg text-[#A5A5A5] py-2"
               >
                 <p>To begin, follow these steps:</p>
                 <ul class="list-disc mt-2 pl-6 text-[#A5A5A5]">
@@ -2982,7 +3089,7 @@
             style="background-image: url(./public/news-main.jpg)"
           >
             <div
-              class="bg-gradient-to-b from-[#00000000] to-[#000000] absolute top-0 left-0 w-full h-full flex flex-col gap-2 w-full items-start justify-end p-6 capitalize"
+              class="bg-gradient-to-b from-black/0 via-black/20 via-black to-black absolute top-0 left-0 w-full h-full flex flex-col gap-2 w-full items-start justify-end p-6 capitalize"
             >
               <h1
                 class="font-semibold text-white text-lg md:text-2xl text-left"
@@ -2992,11 +3099,11 @@
               <p class="text-xs md:text-sm font-normal text-[#A5A5A5]">
                 india batch 04 of the air india cadet pilot program has
                 successfully completed its ground school training with
-                thePilot.in C
+                thePilot.in
               </p>
 
               <a
-                href="https://travel.economictimes.indiatimes.com/news/aviation/international/thepilot-in-joins-hands-with-barcelona-flight-school-to-create-a-course-curriculum-for-commercial-pilots/98144982"
+                href="https://afm.aero/india-pilot-training-group-and-facilitator-thepilot-in-celebrates-ground-school-graduation-of-batch-4-of-air-india-cadet-pilot-program/"
                 target="_blank"
                 class="text-[#A7E1FF] text-base uppercase underline font-medium flex flex-row gap-2 items-left cursor-pointer"
               >
@@ -3019,7 +3126,8 @@
                 <h1
                   class="capitalize text-[#1c3867] font-semibold text-lg md:text-2xl text-left"
                 >
-                  ThePilot.in Partners with Barcelona Flight School
+                  Training for Pilot in India: Understanding the Path & Cracking
+                  the DGCA Examination
                 </h1>
                 <p class="text-xs md:text-sm font-normal text-[#A5A5A5]">
                   Introducing India's First EASA CPL program compliant with
@@ -3027,13 +3135,13 @@
                 </p>
                 <div class="w-[60%]">
                   <img
-                    src="https://www.thepilot.in/wp-content/uploads/2023/04/image-150.svg"
+                    src="https://www.ahmedabadmirror.com/images/am-logo.svg"
                     alt="Eco Times"
                     class="w-full"
                   />
                 </div>
                 <a
-                  href="https://travel.economictimes.indiatimes.com/news/aviation/international/thepilot-in-joins-hands-with-barcelona-flight-school-to-create-a-course-curriculum-for-commercial-pilots/98144982"
+                  href="https://www.ahmedabadmirror.com/-training-for-pilot-in-india-understanding-the-path--cracking-the-dgca-examination/81889711.html#goog_rewarded"
                   target="_blank"
                   class="text-[#1C3867] text-lg uppercase underline font-medium flex items-center gap-2 cursor-pointer"
                 >
@@ -3204,9 +3312,9 @@
             <li>
               <a href="#" class="footer-link">Terms & Conditions</a>
             </li>
-            <li>
+            <!-- <li>
               <a href="#" class="footer-link">Disclaimer</a>
-            </li>
+            </li> -->
           </ul>
         </div>
         <div
