@@ -771,17 +771,256 @@ function scrollGalleryCards(direction) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  const syllabusItems = document.querySelectorAll("#syllabus-item");
+  const syllabusItems = [
+    {
+      title: "Air Meteorology",
+      chunks: [
+        {
+          chunk: [
+            "Atmosphere",
+            "Atmospheric Pressure",
+            "Temperature",
+            "Air Density",
+            "Humidity",
+            "Winds",
+            "Visibility & Fog",
+            "Vertical Motion & Clouds",
+          ],
+        },
+        {
+          chunk: [
+            "Stability and Instability of Atmosphere",
+            "Optical Phenomena",
+            "Precipitation",
+            "Ice Accretion",
+            "Thunderstorm",
+            "Air Masses Fronts & Western Disturbances",
+            "Jet Streams",
+            "Clear Air Turbulence",
+            "Mountain Waves",
+          ],
+        },
+        {
+          chunk: [
+            "Tropical Systems",
+            "Climatology of India",
+            "General Circulation",
+            "Met Services for Aviation",
+            "Weather Radar & Met Satellites",
+            "Met Instruments",
+            "Station Model",
+            "Aerodrome Met Reports and Codes of METAR & SPECI",
+            "Aviation Weather Forecasts",
+          ],
+        },
+        {
+          chunk: [
+            "Tropical Systems",
+            "Climatology of India",
+
+            "Radar Report, Sigmet Message and Satellite Bulletin",
+            "Met Documentation and Briefing",
+            "Flight Forecast",
+          ],
+        },
+      ],
+    },
+    {
+      title: "Air Regulations",
+      chunks: [
+        {
+          chunk: [
+            "Air Density",
+            "Humidity",
+            "Winds",
+            "Visibility & Fog",
+            "Vertical Motion & Clouds",
+          ],
+        },
+        {
+          chunk: [
+            "Stability and Instability of Atmosphere",
+            "Optical Phenomena",
+            "Precipitation",
+            "Ice Accretion",
+            "Thunderstorm",
+            "Air Masses Fronts & Western Disturbances",
+            "Jet Streams",
+            "Clear Air Turbulence",
+            "Mountain Waves",
+          ],
+        },
+        {
+          chunk: [
+            "Tropical Systems",
+            "Climatology of India",
+            "General Circulation",
+            "Met Services for Aviation",
+            "Weather Radar & Met Satellites",
+            "Met Instruments",
+            "Station Model",
+            "Aerodrome Met Reports and Codes of METAR & SPECI",
+            "Aviation Weather Forecasts",
+          ],
+        },
+        {
+          chunk: [
+            "Tropical Systems",
+            "Climatology of India",
+
+            "Radar Report, Sigmet Message and Satellite Bulletin",
+            "Met Documentation and Briefing",
+            "Flight Forecast",
+          ],
+        },
+      ],
+    },
+  ];
+
+  const syllabusContainer = document.getElementById("syllabus-item-container");
 
   syllabusItems.forEach((item) => {
-    const syllabusTitle = item.querySelector("#syllabus-title");
+    let curTile = 0;
+    const syllabusItem = document.createElement("div");
+    syllabusItem.classList = "syllabus-item w-full flex flex-col gap-6";
 
-    syllabusTitle.addEventListener("click", () => {
-      const wrapper = item.querySelector(".syllabus-data-wrapper");
-      const chevron = item.querySelector("#syllabus-toggle");
+    syllabusItem.innerHTML = `
+ <div
+                class="syllabus-title rounded-md bg-[#CAE7F6] p-3 px-4 flex flex-row gap-2 justify-between items-center w-full"
+              >
+                <h1
+                  class="syllabus-title capitalize text-[#1c3867] font-semibold text-lg text-left"
+                >
+                 ${item.title}
+                </h1>
+                <div class="w-6 text-[#1c3867]">
+                  <img
+                    src="./public/chevron-dpwn-blue.svg"
+                    class="syllabus-toggle w-5 h-5 transform transition-transform duration-300"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div
+                class="syllabus-data-wrapper overflow-hidden transition-all duration-500 ease-in-out max-h-0 flex flex-col items-center justify-center gap-2 w-full"
+              >
+                
+               ${item.chunks
+                 .map((chunk, idx) => {
+                   return `
+                     <div
+                  class="data-div flex flex-col items-center justify-center gap-2 w-full hidden"
+                >
+                ${chunk.chunk
+                  .map((topic, index) => {
+                    curTile++;
+                    return `
+                      <div class=${
+                        index % 2 === 0 ? "colored-tile" : "white-tile"
+                      }>
+                      <div class="w-6 text-[#1c3867]">
+                        <p>${curTile.toString().padStart(2, "0")}</p>
+                      </div>
+                      <h1 class="tile-text">${topic}</h1>
+                    </div>`;
+                  })
+                  .join("")}
+                </div>`;
+                 })
+                 .join("")}
+                <div class="flex justify-between items-center mb-6 mt-2 w-full">
+                  <!-- showing numbers -->
+                  <button
+                    id="prev-btn"
+                    class="bg-white px-6 py-2 rounded-full shadow hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed"
+                    disabled
+                  >
+                    ←
+                  </button>
+                  <div
+                    id="num-count"
+                    class="flex justify-center text-lg font-medium"
+                  >
+                    1 / 1
+                  </div>
+                  <button
+                    id="next-btn"
+                    class="bg-white px-6 py-2 rounded-full shadow hover:bg-gray-100 disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    →
+                  </button>
+                </div>
+              </div>
+`;
 
+    syllabusContainer.appendChild(syllabusItem);
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const syllabusItems = document.querySelectorAll(".syllabus-item"); // Changed to class selector
+
+  syllabusItems.forEach((item) => {
+    const syllabusHeader = item.querySelector(".syllabus-title");
+    const wrapper = item.querySelector(".syllabus-data-wrapper");
+    const chevron = item.querySelector(".syllabus-toggle"); // Changed to class
+    const dataDivs = item.querySelectorAll(".data-div"); // Changed to class
+    const prevBtn = item.querySelector("#prev-btn");
+    const nextBtn = item.querySelector("#next-btn");
+    const countDisplay = item.querySelector("#num-count");
+
+    let currentIndex = 0;
+    const visibleCards = 1; // Number of slides to show
+
+    // Toggle accordion
+    syllabusHeader.addEventListener("click", () => {
       wrapper.classList.toggle("open");
       chevron.classList.toggle("rotate-180");
+
+      // Reset carousel when closing
+      if (!wrapper.classList.contains("open")) {
+        currentIndex = 0;
+        updateCounter();
+        updateData(0);
+      }
     });
+
+    // Update counter display
+    function updateCounter() {
+      countDisplay.textContent = `${currentIndex + 1} / ${dataDivs.length}`;
+    }
+
+    // Update control buttons state
+    function updateControls() {
+      prevBtn.disabled = currentIndex === 0;
+      nextBtn.disabled = currentIndex >= dataDivs.length - visibleCards;
+    }
+
+    // Update carousel
+    function updateData(direction) {
+      currentIndex = Math.max(
+        0,
+        Math.min(currentIndex + direction, dataDivs.length - visibleCards)
+      );
+
+      dataDivs.forEach((div, idx) => {
+        div.classList.toggle("hidden", idx !== currentIndex);
+      });
+
+      updateCounter();
+      updateControls();
+    }
+
+    // Initialize first slide
+    dataDivs.forEach((div, idx) => {
+      div.classList.toggle("hidden", idx !== 0);
+    });
+
+    // Event listeners
+    prevBtn?.addEventListener("click", () => updateData(-1));
+    nextBtn?.addEventListener("click", () => updateData(1));
+
+    updateCounter();
+    updateControls();
   });
 });

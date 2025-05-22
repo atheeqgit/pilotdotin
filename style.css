@@ -205,9 +205,16 @@ h6 {
 .faq-answer-wrapper.open {
   max-height: 1000px; /* enough to fit your content */
 }
+.syllabus-data-wrapper {
+  transition: max-height 0.5s ease-in-out;
+}
 
 .syllabus-data-wrapper.open {
-  max-height: 1000px; /* enough to fit your content */
+  max-height: 2000px; /* Adjust based on your content height */
+}
+
+.rotate-180 {
+  transform: rotate(180deg);
 }
 
 section {

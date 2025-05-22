@@ -27,7 +27,7 @@
 
     <style type="text/tailwindcss">
       .heading-text {
-        @apply text-3xl md:text-4xl font-semibold capitalize text-[#1C3867] text-center;
+        @apply text-3xl md:text-4xl font-bold lg:font-semibold capitalize text-[#1C3867] text-center;
       }
       .title-Text {
         @apply text-3xl md:text-4xl font-semibold capitalize text-[#1C3867];
@@ -36,29 +36,13 @@
       .title-sub-Text {
         @apply text-2xl font-bold  text-[#1C3867] text-center;
       }
-      .mid-nav-links {
-        @apply border border-transparent hover:border-[#1C3867] px-4 py-3 rounded-lg bg-transparent text-[#787878] text-xl font-medium capitalize cursor-pointer;
-      }
 
-      .step-div {
-        @apply px-5 py-2 rounded-full h-fit bg-[#1C3867] w-fit text-white text-sm font-normal capitalize border-2 border-[#A7E1FF] text-nowrap;
-      }
-
-      .step-title {
-        @apply text-lg md:text-2xl font-semibold capitalize text-[#1C3867] text-left;
-      }
-      .step-sub-text {
-        @apply text-[#A5A5A5] text-xs md:text-base font-normal capitalize text-left;
-      }
       .understand-box {
         @apply col-span-12 md:col-span-2 lg:col-span-1 flex flex-row md:flex-col gap-4 items-center md:items-start justify-start md:justify-center p-4 py-6 border-[#EBEBEB] md:border-[#1C386780] border-b md:border  md:rounded-2xl;
       }
       .understand-box-2 {
         @apply col-span-12 md:col-span-2 lg:col-span-1 flex flex-row md:flex-col gap-4 items-center md:items-center justify-start md:justify-center p-4 py-6 border-[#EBEBEB] md:border-[#1C386780] border-b md:border  md:rounded-2xl;
       }
-      /* .understand-box-2 {
-        @apply  col-span-12 md:col-span-2 lg:col-span-1 flex flex-col gap-4 items-center justify-center p-4 border-[#1C386780] border rounded-2xl;
-      } */
       .section-div {
         @apply py-10 relative flex flex-col w-full items-center justify-center p-6;
       }
@@ -67,10 +51,14 @@
       }
 
       .white-tile {
-        @apply rounded-md bg-white p-2 px-4 flex flex-row gap-2 justify-start items-center w-full font-[500];
+        @apply rounded-md bg-white p-3 px-4 flex flex-row gap-4 justify-start items-center w-full font-[500];
       }
       .colored-tile {
-        @apply rounded-md bg-[#CAE7F666] p-2 px-4 flex flex-row gap-2 justify-start items-center w-full font-[500];
+        @apply rounded-md bg-[#CAE7F666] p-3 px-4 flex flex-row gap-4 justify-start items-center w-full font-[500];
+      }
+
+      .tile-text {
+        @apply capitalize text-[#1c3867] text-lg text-left;
       }
     </style>
   </head>
@@ -421,7 +409,7 @@
       class="relative min-h-[80vh] md:min-h-fit pb-10 flex flex-row gap-4 justify-center items-center w-full overflow-hidden"
     >
       <div
-        class="section-inside grid grid-cols-12 lg:flex-row items-center justify-center min-h-[60vh] gap-4 lg:gap-10 pt-6"
+        class="section-inside grid grid-cols-12 lg:flex-row items-center justify-center min-h-[60vh] gap-4 lg:gap-10 lg:pt-6"
       >
         <div
           class="col-span-12 lg:col-span-6 flex flex-col justify-center w-full p-8 gap-12 lg:gap-6 relative"
@@ -481,7 +469,6 @@
       </div>
     </section>
     <!-- trapizoid -->
-
     <div
       class="w-full flex flex-col lg:flex-row gap-4 items-left lg:items-center bg-[#EEF7FC] h-fit pb-4 lg:pb-0 lg:h-[130px]"
     >
@@ -551,7 +538,6 @@
         </div>
       </div>
     </div>
-
     <!-- Understand The DGCA Exam Syllabus -->
     <section class="section-div">
       <div
@@ -658,11 +644,13 @@
       </div>
     </section>
     <!-- DGCA Exam Eligibility -->
-    <section class="section-div bg-[#CAE7F633]">
-      <div class="heading-text">
-        DGCA Exam <span class="text-[#1C3867]">Eligibility</span>
-      </div>
-      <div class="max-w-[1400px] w-full lg:w-[90%] p-6">
+    <div class="heading-text my-8">
+      <span class="text-black">DGCA Exam</span> Eligibility
+    </div>
+    <section
+      class="relative flex flex-col w-full items-center justify-center p-6 bg-[#CAE7F633]"
+    >
+      <div class="max-w-[1400px] w-full lg:w-[90%] py-6 md:p-6">
         <div class="grid grid-cols-12 gap-6 w-full">
           <div class="col-span-12 lg:col-span-4 flex flex-col gap-4">
             <h2
@@ -1047,7 +1035,7 @@
         </div>
       </div>
     </section>
-    <!-- student gallry -->
+    <!-- student gallery -->
     <section class="section-div">
       <div class="section-inside">
         <h1 class="heading-text mb-6">Student Gallery</h1>
@@ -1191,341 +1179,15 @@
         </div>
       </div>
     </section>
-    <!-- Syllabus -->
+    <!-- phone Syllabus -->
     <section class="section-div lg:hidden">
       <div class="section-inside grid place-items-center">
         <h1 class="heading-text mb-6">Syllabus</h1>
         <div class="w-full flex flex-col gap-4 gap-4">
-          <div class="flex flex-col gap-0 w-full items-start cursor-pointer">
-            <div id="syllabus-item" class="w-full flex flex-col gap-6">
-              <div
-                id="syllabus-title"
-                class="rounded-md bg-[#CAE7F6] p-2 px-4 flex flex-row gap-2 justify-between items-center w-full"
-              >
-                <h1
-                  class="syllabus-title capitalize text-[#1c3867] font-semibold text-lg text-left"
-                >
-                  Air Metrology
-                </h1>
-                <div class="w-6 text-[#1c3867]" id="syllabus-toggle">
-                  <img
-                    src="./public/chevron-dpwn-blue.svg"
-                    id="syllabus-toggle"
-                    class="w-5 h-5 transform transition-transform duration-300"
-                    alt=""
-                  />
-                </div>
-              </div>
-
-              <div
-                class="syllabus-data-wrapper overflow-hidden transition-all duration-500 ease-in-out max-h-0 flex flex-col items-center justify-center gap-2 w-full"
-              >
-                <div
-                  id="data-div"
-                  class="flex flex-col items-center justify-center gap-2 w-full"
-                >
-                  <div class="colored-tile">
-                    <div class="w-6 text-[#1c3867]">
-                      <p>01</p>
-                    </div>
-                    <h1 class="capitalize text-[#1c3867] text-lg text-left">
-                      Air Metrology
-                    </h1>
-                  </div>
-                  <div class="white-tile">
-                    <div class="w-6 text-[#1c3867]">
-                      <p>02</p>
-                    </div>
-                    <h1 class="capitalize text-[#1c3867] text-lg text-left">
-                      Atmospheric Pressure
-                    </h1>
-                  </div>
-                  <div class="colored-tile">
-                    <div class="w-6 text-[#1c3867]">
-                      <p>03</p>
-                    </div>
-                    <h1 class="capitalize text-[#1c3867] text-lg text-left">
-                      Temperature
-                    </h1>
-                  </div>
-                  <div class="white-tile">
-                    <div class="w-6 text-[#1c3867]">
-                      <p>04</p>
-                    </div>
-                    <h1 class="capitalize text-[#1c3867] text-lg text-left">
-                      Air Density
-                    </h1>
-                  </div>
-                  <div class="colored-tile">
-                    <div class="w-6 text-[#1c3867]">
-                      <p>05</p>
-                    </div>
-                    <h1 class="capitalize text-[#1c3867] text-lg text-left">
-                      Humidity
-                    </h1>
-                  </div>
-                </div>
-                <div class="flex justify-between mt-4 mb-2 w-full">
-                  <button
-                    class="bg-white px-6 py-2 rounded-full shadow hover:bg-gray-100"
-                  >
-                    ←
-                  </button>
-                  <button
-                    class="bg-white px-6 py-2 rounded-full shadow hover:bg-gray-100"
-                  >
-                    →
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div id="syllabus-item" class="w-full flex flex-col gap-6">
-              <div
-                id="syllabus-title"
-                class="rounded-md bg-[#CAE7F6] p-2 px-4 flex flex-row gap-2 justify-between items-center w-full"
-              >
-                <h1
-                  class="syllabus-title capitalize text-[#1c3867] font-semibold text-lg text-left"
-                >
-                  Air Regulations
-                </h1>
-                <div class="w-6 text-[#1c3867]" id="syllabus-toggle">
-                  <img
-                    src="./public/chevron-dpwn-blue.svg"
-                    id="syllabus-toggle"
-                    class="w-5 h-5 transform transition-transform duration-300"
-                    alt=""
-                  />
-                </div>
-              </div>
-
-              <div
-                class="syllabus-data-wrapper overflow-hidden transition-all duration-500 ease-in-out max-h-0 flex flex-col items-center justify-center gap-2 w-full"
-              >
-                <div
-                  id="data-div"
-                  class="flex flex-col items-center justify-center gap-2 w-full"
-                >
-                  <div class="colored-tile">
-                    <div class="w-6 text-[#1c3867]">
-                      <p>01</p>
-                    </div>
-                    <h1 class="capitalize text-[#1c3867] text-lg text-left">
-                      Air Metrology
-                    </h1>
-                  </div>
-                  <div class="white-tile">
-                    <div class="w-6 text-[#1c3867]">
-                      <p>02</p>
-                    </div>
-                    <h1 class="capitalize text-[#1c3867] text-lg text-left">
-                      Atmospheric Pressure
-                    </h1>
-                  </div>
-                  <div class="colored-tile">
-                    <div class="w-6 text-[#1c3867]">
-                      <p>03</p>
-                    </div>
-                    <h1 class="capitalize text-[#1c3867] text-lg text-left">
-                      Temperature
-                    </h1>
-                  </div>
-                  <div class="white-tile">
-                    <div class="w-6 text-[#1c3867]">
-                      <p>04</p>
-                    </div>
-                    <h1 class="capitalize text-[#1c3867] text-lg text-left">
-                      Air Density
-                    </h1>
-                  </div>
-                  <div class="colored-tile">
-                    <div class="w-6 text-[#1c3867]">
-                      <p>05</p>
-                    </div>
-                    <h1 class="capitalize text-[#1c3867] text-lg text-left">
-                      Humidity
-                    </h1>
-                  </div>
-                </div>
-                <div class="flex justify-between mt-4 mb-2 w-full">
-                  <button
-                    class="bg-white px-6 py-2 rounded-full shadow hover:bg-gray-100"
-                  >
-                    ←
-                  </button>
-                  <button
-                    class="bg-white px-6 py-2 rounded-full shadow hover:bg-gray-100"
-                  >
-                    →
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div id="syllabus-item" class="w-full flex flex-col gap-6">
-              <div
-                id="syllabus-title"
-                class="rounded-md bg-[#CAE7F6] p-2 px-4 flex flex-row gap-2 justify-between items-center w-full"
-              >
-                <h1
-                  class="syllabus-title capitalize text-[#1c3867] font-semibold text-lg text-left"
-                >
-                  Air Navigation
-                </h1>
-                <div class="w-6 text-[#1c3867]" id="syllabus-toggle">
-                  <img
-                    src="./public/chevron-dpwn-blue.svg"
-                    id="syllabus-toggle"
-                    class="w-5 h-5 transform transition-transform duration-300"
-                    alt=""
-                  />
-                </div>
-              </div>
-
-              <div
-                class="syllabus-data-wrapper overflow-hidden transition-all duration-500 ease-in-out max-h-0 flex flex-col items-center justify-center gap-2 w-full"
-              >
-                <div
-                  id="data-div"
-                  class="flex flex-col items-center justify-center gap-2 w-full"
-                >
-                  <div class="colored-tile">
-                    <div class="w-6 text-[#1c3867]">
-                      <p>01</p>
-                    </div>
-                    <h1 class="capitalize text-[#1c3867] text-lg text-left">
-                      Air Metrology
-                    </h1>
-                  </div>
-                  <div class="white-tile">
-                    <div class="w-6 text-[#1c3867]">
-                      <p>02</p>
-                    </div>
-                    <h1 class="capitalize text-[#1c3867] text-lg text-left">
-                      Atmospheric Pressure
-                    </h1>
-                  </div>
-                  <div class="colored-tile">
-                    <div class="w-6 text-[#1c3867]">
-                      <p>03</p>
-                    </div>
-                    <h1 class="capitalize text-[#1c3867] text-lg text-left">
-                      Temperature
-                    </h1>
-                  </div>
-                  <div class="white-tile">
-                    <div class="w-6 text-[#1c3867]">
-                      <p>04</p>
-                    </div>
-                    <h1 class="capitalize text-[#1c3867] text-lg text-left">
-                      Air Density
-                    </h1>
-                  </div>
-                  <div class="colored-tile">
-                    <div class="w-6 text-[#1c3867]">
-                      <p>05</p>
-                    </div>
-                    <h1 class="capitalize text-[#1c3867] text-lg text-left">
-                      Humidity
-                    </h1>
-                  </div>
-                </div>
-                <div class="flex justify-between mt-4 mb-2 w-full">
-                  <button
-                    class="bg-white px-6 py-2 rounded-full shadow hover:bg-gray-100"
-                  >
-                    ←
-                  </button>
-                  <button
-                    class="bg-white px-6 py-2 rounded-full shadow hover:bg-gray-100"
-                  >
-                    →
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div id="syllabus-item" class="w-full flex flex-col gap-6">
-              <div
-                id="syllabus-title"
-                class="rounded-md bg-[#CAE7F6] p-2 px-4 flex flex-row gap-2 justify-between items-center w-full"
-              >
-                <h1
-                  class="syllabus-title capitalize text-[#1c3867] font-semibold text-lg text-left"
-                >
-                  Technical General
-                </h1>
-                <div class="w-6 text-[#1c3867]" id="syllabus-toggle">
-                  <img
-                    src="./public/chevron-dpwn-blue.svg"
-                    id="syllabus-toggle"
-                    class="w-5 h-5 transform transition-transform duration-300"
-                    alt=""
-                  />
-                </div>
-              </div>
-
-              <div
-                class="syllabus-data-wrapper overflow-hidden transition-all duration-500 ease-in-out max-h-0 flex flex-col items-center justify-center gap-2 w-full"
-              >
-                <div
-                  id="data-div"
-                  class="flex flex-col items-center justify-center gap-2 w-full"
-                >
-                  <div class="colored-tile">
-                    <div class="w-6 text-[#1c3867]">
-                      <p>01</p>
-                    </div>
-                    <h1 class="capitalize text-[#1c3867] text-lg text-left">
-                      Air Metrology
-                    </h1>
-                  </div>
-                  <div class="white-tile">
-                    <div class="w-6 text-[#1c3867]">
-                      <p>02</p>
-                    </div>
-                    <h1 class="capitalize text-[#1c3867] text-lg text-left">
-                      Atmospheric Pressure
-                    </h1>
-                  </div>
-                  <div class="colored-tile">
-                    <div class="w-6 text-[#1c3867]">
-                      <p>03</p>
-                    </div>
-                    <h1 class="capitalize text-[#1c3867] text-lg text-left">
-                      Temperature
-                    </h1>
-                  </div>
-                  <div class="white-tile">
-                    <div class="w-6 text-[#1c3867]">
-                      <p>04</p>
-                    </div>
-                    <h1 class="capitalize text-[#1c3867] text-lg text-left">
-                      Air Density
-                    </h1>
-                  </div>
-                  <div class="colored-tile">
-                    <div class="w-6 text-[#1c3867]">
-                      <p>05</p>
-                    </div>
-                    <h1 class="capitalize text-[#1c3867] text-lg text-left">
-                      Humidity
-                    </h1>
-                  </div>
-                </div>
-                <div class="flex justify-between mt-4 mb-2 w-full">
-                  <button
-                    class="bg-white px-6 py-2 rounded-full shadow hover:bg-gray-100"
-                  >
-                    ←
-                  </button>
-                  <button
-                    class="bg-white px-6 py-2 rounded-full shadow hover:bg-gray-100"
-                  >
-                    →
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
+          <div
+            id="syllabus-item-container"
+            class="flex flex-col gap-0 w-full items-start cursor-pointer"
+          ></div>
         </div>
       </div>
     </section>
