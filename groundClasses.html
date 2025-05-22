@@ -3,7 +3,1841 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+
+    <title>ThePilot.in</title>
+    <!-- Google Font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ?======  TAILWIND CDN  ======= -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="tailwind.config.js"></script>
+    <script src="script.js"></script>
+
+    <style type="text/tailwindcss">
+      .heading-text {
+        @apply text-3xl md:text-4xl font-semibold capitalize text-[#1C3867] text-center;
+      }
+      .title-Text {
+        @apply text-3xl md:text-4xl font-semibold capitalize text-[#1C3867];
+      }
+
+      .title-sub-Text {
+        @apply text-2xl font-bold  text-[#1C3867] text-center;
+      }
+      .mid-nav-links {
+        @apply border border-transparent hover:border-[#1C3867] px-4 py-3 rounded-lg bg-transparent text-[#787878] text-xl font-medium capitalize cursor-pointer;
+      }
+
+      .step-div {
+        @apply px-5 py-2 rounded-full h-fit bg-[#1C3867] w-fit text-white text-sm font-normal capitalize border-2 border-[#A7E1FF] text-nowrap;
+      }
+
+      .step-title {
+        @apply text-lg md:text-2xl font-semibold capitalize text-[#1C3867] text-left;
+      }
+      .step-sub-text {
+        @apply text-[#A5A5A5] text-xs md:text-base font-normal capitalize text-left;
+      }
+      .understand-box {
+        @apply col-span-12 md:col-span-2 lg:col-span-1 flex flex-row md:flex-col gap-4 items-center md:items-start justify-start md:justify-center p-4 py-6 border-[#EBEBEB] md:border-[#1C386780] border-b md:border  md:rounded-2xl;
+      }
+      .understand-box-2 {
+        @apply col-span-12 md:col-span-2 lg:col-span-1 flex flex-row md:flex-col gap-4 items-center md:items-center justify-start md:justify-center p-4 py-6 border-[#EBEBEB] md:border-[#1C386780] border-b md:border  md:rounded-2xl;
+      }
+      /* .understand-box-2 {
+        @apply  col-span-12 md:col-span-2 lg:col-span-1 flex flex-col gap-4 items-center justify-center p-4 border-[#1C386780] border rounded-2xl;
+      } */
+      .section-div {
+        @apply py-10 relative flex flex-col w-full items-center justify-center p-6;
+      }
+      .section-inside {
+        @apply max-w-[1400px] w-full lg:mx-10;
+      }
+
+      .white-tile {
+        @apply rounded-md bg-white p-2 px-4 flex flex-row gap-2 justify-start items-center w-full font-[500];
+      }
+      .colored-tile {
+        @apply rounded-md bg-[#CAE7F666] p-2 px-4 flex flex-row gap-2 justify-start items-center w-full font-[500];
+      }
+    </style>
   </head>
-  <body></body>
+  <body class="bg-white min-h-screen w-screen overflow-x-hidden">
+    <!-- desktop nav-->
+    <nav
+      id="desktop-nav"
+      class="hidden max-w-[1400px] lg:flex rounded-full my-2 py-2 px-4 lg:px-4 bg-[#1C3867] items-center justify-between w-[94%] border-b mx-auto"
+    >
+      <!-- Logo -->
+      <a href="https://thepilot.in/" class="w-[125px]">
+        <img class="w-full" src="./public/pilot-logo-white.svg" alt="Logo" />
+      </a>
+
+      <!-- Large Screen Navigation -->
+      <ul
+        class="hidden lg:flex flex-row items-center h-[60px] text-white justify-center md:gap-6 xl:gap-10 capitalize"
+      >
+        <li
+          class="flex flex-row gap-2 justify-center items-center cursor-pointer text-no-wrap"
+        >
+          <a
+            class="text-[15px] capitalize font-medium text-[#A7E1FF] cursor-pointer text-center hover:text-primary"
+            href="https://thepilot.in/"
+            >Home</a
+          >
+        </li>
+        <li
+          class="flex flex-row gap-2 justify-center items-center cursor-pointer text-no-wrap relative h-full"
+        >
+          <a
+            href="#Pilot-Training"
+            class="text-[15px] capitalize font-medium cursor-pointer text-center hover:text-primary"
+          >
+            Pilot Training
+          </a>
+          <div><img src="./public/chevron-white.svg" alt="" srcset="" /></div>
+          <ul>
+            <li>
+              <a
+                href="https://thepilot.in/pages/pilot-training-flying-school-usa"
+                target="_blank"
+                >USA</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://thepilot.in/pages/pilot-training-flying-school-canada"
+                target="_blank"
+                >canada</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://thepilot.in/pages/pilot-training-flying-school-New-zealand"
+                target="_blank"
+                >new zealand</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://thepilot.in/pages/pilot-training-flying-school-india"
+                target="_blank"
+                >india</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://thepilot.in/pages/pilot-training-flying-school-southafrica"
+                target="_blank"
+                >south africa</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://thepilot.in/pages/pilot-training-flying-school-australia"
+                target="_blank"
+                >australia</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://thepilot.in/pages/pilot-training-flying-school-sri-lanka"
+                target="_blank"
+                >sri lanka</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://thepilot.in/pages/pilot-training-flying-school-spain"
+                target="_blank"
+                >spain</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://thepilot.in/pages/guide-to-conversion-of-cpl"
+                target="_blank"
+                >guide to conversion of cpl</a
+              >
+            </li>
+          </ul>
+        </li>
+        <li
+          class="flex flex-row gap-2 justify-center items-center cursor-pointer text-no-wrap"
+        >
+          <a
+            href="https://thepilot.in/pages/how-to-become-a-pilot/"
+            class="text-[15px] capitalize font-medium cursor-pointer text-center hover:text-primary"
+          >
+            Become a Pilot
+          </a>
+        </li>
+
+        <li
+          class="flex flex-row gap-2 justify-center items-center cursor-pointer text-no-wrap relative h-full"
+        >
+          <a
+            href="#cadet-pilot-programs"
+            class="text-[15px] capitalize font-medium cursor-pointer text-center hover:text-primary"
+          >
+            Cadet Pilot Program In India
+          </a>
+          <div><img src="./public/chevron-white.svg" alt="" srcset="" /></div>
+          <ul>
+            <li>
+              <a
+                href="https://thepilot.in/pages/air-asia-cadet-pilot-program/"
+                target="_blank"
+                >Air Asia Cadet Pilot Program</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://thepilot.in/pages/indigo-cadet-pilot-program/"
+                target="_blank"
+                >Indigo Cadet Pilot Program</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://thepilot.in/pages/air-india-cadet-pilot-program/"
+                target="_blank"
+                >Air India Cadet Pilot Program</a
+              >
+            </li>
+            <!-- Other submenu items... -->
+          </ul>
+        </li>
+        <li
+          class="flex flex-row gap-2 justify-center items-center cursor-pointer text-no-wrap"
+        >
+          <a
+            href="https://thepilot.in/pages/dgca-ground-classes-pilot-study/"
+            class="text-[15px] capitalize font-medium cursor-pointer text-center hover:text-primary"
+          >
+            DGCA Ground Classes
+          </a>
+        </li>
+      </ul>
+      <a
+        href="https://thepilot.in/ThePilotBablu/contact/"
+        class="cursor-pointer border-2 text-center bg-white text-nowrap border-solid border-primary px-5 py-3 rounded-full font-semibold text-[#1C3867] text-sm h-full"
+      >
+        Contact Us
+      </a>
+    </nav>
+    <!-- Mobile Menu -->
+    <nav
+      class="lg:hidden relative overflow-y-scroll p-6 bg-white flex items-center justify-between w-full mx-auto"
+    >
+      <!-- Logo -->
+      <div class="w-[125px] md:w-[150px]">
+        <img class="w-full" src="./public/pilot-logo-blue.svg" alt="Logo" />
+      </div>
+
+      <!-- Burger Menu -->
+      <div id="menu-btn" class="lg:hidden p-4">
+        <img src="./public/menu-icon.svg" alt="" />
+        <!-- <button id="menu-btn" class="text-2xl">&#9776;</button> -->
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="fixed top-0 left-0 bg-white w-full h-screen flex flex-col p-6 items-start z-[200] transform -translate-y-full transition-transform duration-300 ease-in-out"
+      >
+        <button id="close-btn" class="absolute top-10 right-10 text-2xl">
+          &#10005;
+        </button>
+        <div class="flex flex-row justify-between">
+          <div class="w-[125px] md:w-[150px]">
+            <img class="w-full" src="./public/pilot-logo-blue.svg" alt="Logo" />
+          </div>
+        </div>
+        <ul>
+          <li>
+            <a
+              class="text-[15px] capitalize font-medium cursor-pointer text-center hover:text-primary mobile-nav-close"
+              href="https://thepilot.in/"
+            >
+              Home
+            </a>
+          </li>
+
+          <li>
+            <div
+              class="w-full flex flex-row gap-4 justify-between items-center"
+            >
+              <a
+                href="#Pilot-Training"
+                class="text-[15px] capitalize font-medium cursor-pointer text-center hover:text-primary mobile-nav-close"
+              >
+                Pilot Training
+              </a>
+              <button
+                class="w-10 h-8 grid place-items-center border border-[#ccc] submenu-toggle"
+              >
+                &#10095;
+              </button>
+            </div>
+            <ul>
+              <li>
+                <a
+                  href="https://thepilot.in/pages/pilot-training-flying-school-usa"
+                  target="_blank"
+                  >USA</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://thepilot.in/pages/pilot-training-flying-school-new-zealand/"
+                  target="_blank"
+                  >new zealand</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://thepilot.in/pages/pilot-training-flying-school-canada/"
+                  target="_blank"
+                  >canada</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://thepilot.in/pages/pilot-training-flying-school-india/"
+                  target="_blank"
+                  >india</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://thepilot.in/pages/pilot-training-flying-school-southafrica/"
+                  target="_blank"
+                  >south africa</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://thepilot.in/pages/pilot-training-flying-school-australia/"
+                  target="_blank"
+                  >australia</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://thepilot.in/pages/pilot-training-flying-school-sri-lanka/"
+                  target="_blank"
+                  >sri lanka</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://thepilot.in/pages/pilot-training-flying-school-spain/"
+                  target="_blank"
+                  >spain</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a
+              class="text-[15px] capitalize font-medium cursor-pointer text-center hover:text-primary mobile-nav-close"
+              href="https://thepilot.in/pages/how-to-become-a-pilot/"
+            >
+              become a pilot
+            </a>
+          </li>
+          <li>
+            <div
+              class="w-full flex flex-row gap-4 justify-between items-center"
+            >
+              <a
+                href="#cadet-pilot-programs"
+                class="text-[15px] capitalize font-medium cursor-pointer text-center hover:text-primary mobile-nav-close"
+              >
+                Cadet Pilot Program In India
+              </a>
+              <button
+                class="w-10 h-8 grid place-items-center border border-[#ccc] submenu-toggle"
+              >
+                &#10095;
+              </button>
+            </div>
+            <ul>
+              <li>
+                <a
+                  href="https://thepilot.in/pages/air-asia-cadet-pilot-program/"
+                  target="_blank"
+                  >Air Asia Cadet Pilot Program</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://thepilot.in/pages/indigo-cadet-pilot-program/"
+                  target="_blank"
+                  >Indigo Cadet Pilot Program</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://thepilot.in/pages/air-india-cadet-pilot-program/"
+                  target="_blank"
+                  >Air India Cadet Pilot Program</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a
+              class="text-[15px] capitalize font-medium cursor-pointer text-center hover:text-primary mobile-nav-close"
+              href="https://thepilot.in/pages/dgca-ground-classes-pilot-study/"
+            >
+              DGCA ground classes
+            </a>
+          </li>
+          <a
+            href="https://thepilot.in/ThePilotBablu/contact/"
+            class="cursor-pointer mt-4 border-2 text-center bg-white text-nowrap border-solid border-primary px-6 py-4 rounded-full font-semibold text-[#1C3867] text-sm h-full w-fit mx-auto"
+          >
+            Contact Us
+          </a>
+        </ul>
+      </div>
+    </nav>
+    <!-- hero -->
+    <section
+      class="relative min-h-[80vh] md:min-h-fit pb-10 flex flex-row gap-4 justify-center items-center w-full overflow-hidden"
+    >
+      <div
+        class="section-inside grid grid-cols-12 lg:flex-row items-center justify-center min-h-[60vh] gap-4 lg:gap-10 pt-6"
+      >
+        <div
+          class="col-span-12 lg:col-span-6 flex flex-col justify-center w-full p-8 gap-12 lg:gap-6 relative"
+        >
+          <div
+            class="w-[250px] h-[150px] rounded-full bg-[#E8FFDA] absolute -bottom-10 left-[100px] blur-[100px] -z-10"
+          ></div>
+          <div class="flex flex-col items-start justify-start gap-4">
+            <h4
+              class="text-xl font-bold text-[#1C3867] text-left uppercase w-full text-left"
+            >
+              Commercial Pilot License
+            </h4>
+            <h1
+              class="uppercase text-black helvatica-font text-5xl lg:text-7xl"
+            >
+              Ground Class for
+              <span class="text-[#CAE7F6]"> DGCA Examination</span>
+            </h1>
+
+            <p class="text-base font-normal text-[#A5A5A5]">
+              Professional Ground classes for DGCA designed to streamline your
+              DGCA exam preparation. Covering all essential DGCA exam subjects
+              with expert guidance, updated content and a focus on conceptual
+              clarity. 
+            </p>
+          </div>
+          <div
+            class="flex flex-row items-start flex-col md:flex-row gap-4 lg:gap-6"
+          >
+            <a
+              class="rounded-full bg-[#1c3867] text-white text-center px-8 py-4 border-2 border-solid border-[#1c3867] uppercase text-base font-medium cursor-pointer"
+            >
+              Course Syllabus
+            </a>
+            <a
+              class="rounded-full bg-[#CAE7F633] text-[#1c3867] text-center px-8 py-4 border-2 border-solid border-[#1c3867] uppercase text-base font-medium cursor-pointer underline"
+            >
+              Students Reviews
+            </a>
+          </div>
+        </div>
+        <div
+          class="col-span-12 lg:col-span-6 flex justify-center relative items-center px-8"
+        >
+          <div
+            class="w-[250px] h-[150px] rounded-full bg-[#B6E7FF] absolute top-10 left-[0px] blur-[150px] -z-10"
+          ></div>
+          <div
+            class="w-[250px] h-[150px] rounded-full bg-[#FFEBB6] absolute -bottom-10 left-[100px] blur-[100px] -z-10"
+          ></div>
+
+          <div class="w-full">
+            <img src="./public/2-banner.png" class="mx-auto" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- trapizoid -->
+
+    <div
+      class="w-full flex flex-col lg:flex-row gap-4 items-left lg:items-center bg-[#EEF7FC] h-fit pb-4 lg:pb-0 lg:h-[130px]"
+    >
+      <div
+        class="w-[250px] md:w-[600px] h-100 md:h-[130px] bg-[#EEF7FC] relative"
+      >
+        <div class="trapezoid"></div>
+        <div class="trapezoid-2 absolute top-0 left-0 z-10"></div>
+        <div
+          class="absolute top-1/2 left-1/3 transform -translate-x-1/2 -translate-y-1/2 z-10"
+        >
+          <h1 class="text-2xl md:text-4xl text-[#CAE7F6] italic font-semibold">
+            ThePilot.in
+          </h1>
+          <h1
+            class="text-base md:text-xl text-white italic font-semibold uppercase"
+          >
+            Partners For
+          </h1>
+        </div>
+      </div>
+
+      <div
+        class="flex w-full flex-row flex-wrap gap-2 md:gap-4 md:gap-6 p-6 md:p-0"
+      >
+        <div class="flex flex-1 flex-col gap-2">
+          <div class="w-[80px] md:w-[100px]">
+            <img
+              class="w-full"
+              src="https://thepilot.in/wp-content/uploads/2025/05//partners-marigold.svg"
+              alt=""
+            />
+          </div>
+          <p
+            class="text-[#2A3485] text-xs md:text-base mt-auto capitalize italic font-semibold"
+          >
+            Cadet pilot program
+          </p>
+        </div>
+        <div class="flex flex-1 flex-col gap-2">
+          <div class="w-[80px] md:w-[100px]">
+            <img
+              class="w-full"
+              src="https://thepilot.in/wp-content/uploads/2025/05//banner-air-asia.svg"
+              alt=""
+            />
+          </div>
+          <p
+            class="text-[#E32526] text-xs md:text-base mt-auto capitalize italic font-semibold"
+          >
+            Cadet pilot program
+          </p>
+        </div>
+        <div class="flex flex-1 flex-col gap-2">
+          <div class="w-[100px] md:w-[140px]">
+            <img
+              class="w-full"
+              src="https://thepilot.in/wp-content/uploads/2025/05//banner-air-india.svg"
+              alt=""
+            />
+          </div>
+          <p
+            class="text-[#E32526] text-xs md:text-base mt-auto capitalize italic font-semibold"
+          >
+            Cadet pilot program
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Understand The DGCA Exam Syllabus -->
+    <section class="section-div">
+      <div
+        class="section-inside flex flex-col gap-10 justify-center items-center"
+      >
+        <div
+          class="flex flex-col w-full gap-6 lg:gap-3 justify-center items-center"
+        >
+          <h1 class="title-Text text-center">
+            Understand The DGCA Exam Syllabus
+          </h1>
+          <p
+            class="text-base font-normal text-[#A5A5A5] w-full md:w-[80%] lg:w-[70%] text-center"
+          >
+            Our curriculum is precisely structured in accordance with the
+            official DGCA exam syllabus, as prescribed by the DGCA Central
+            Examination Organization. This ensures comprehensive coverage of all
+            relevant subjects, enabling students to prepare methodically and in
+            alignment with the latest regulatory standards.
+          </p>
+        </div>
+        <div
+          class="flex flex-col gap-6 items-center justify-center border-[#1C386780] border rounded-2xl md:border-0 w-full p-4"
+        >
+          <div
+            class="w-full grid grid-cols-12 md:grid-cols-6 lg:grid-cols-5 md:gap-4"
+          >
+            <div class="understand-box">
+              <div class="bg-[#CAE7F6] rounded-lg p-2">
+                <img src="./public/2-uncerstand-cloud.svg" class="w-8" alt="" />
+              </div>
+              <p
+                class="text-lg md:text-xl font-semibold text-[#1C3867] text-left"
+              >
+                Air <br class="hidden lg:block" />
+                Meteorology
+              </p>
+            </div>
+            <div class="understand-box">
+              <div class="bg-[#CAE7F6] rounded-lg p-2">
+                <img
+                  src="./public/2-uncerstand-air-regulations.svg"
+                  class="w-8"
+                  alt=""
+                />
+              </div>
+              <p
+                class="text-lg md:text-xl font-semibold text-[#1C3867] text-left"
+              >
+                Air Regulations
+              </p>
+            </div>
+            <div class="understand-box">
+              <div class="bg-[#CAE7F6] rounded-lg p-2">
+                <img
+                  src="./public/2-uncerstand-air-navigation.svg"
+                  class="w-8"
+                  alt=""
+                />
+              </div>
+              <p
+                class="text-lg md:text-xl font-semibold text-[#1C3867] text-left"
+              >
+                Air Navigation
+              </p>
+            </div>
+            <div class="understand-box">
+              <div class="bg-[#CAE7F6] rounded-lg p-2">
+                <img src="./public/2-uncerstand-rtr.svg" class="w-8" alt="" />
+              </div>
+              <p
+                class="text-lg md:text-xl font-semibold text-[#1C3867] text-left"
+              >
+                RTR
+              </p>
+            </div>
+            <div class="understand-box">
+              <div class="bg-[#CAE7F6] rounded-lg p-2">
+                <img
+                  src="./public/2-uncerstand-technical-general.svg"
+                  class="w-8"
+                  alt=""
+                />
+              </div>
+              <p
+                class="text-lg md:text-xl font-semibold text-[#1C3867] text-left"
+              >
+                Technical <br class="hidden lg:block" />
+                General
+              </p>
+            </div>
+          </div>
+          <a
+            class="w-full md:w-fit bg-[#CAE7F6] flex flex-row gap-3 items-center justify-center py-6 px-6 md:py-3 rounded-2xl md:rounded-md"
+          >
+            <p
+              class="capitalize text-[#1C3867] text-lg md:text-base font-semibold"
+            >
+              learn more
+            </p>
+            <img src="./public/arrow-cross-blue.svg" class="w-3" alt="" />
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- DGCA Exam Eligibility -->
+    <section class="section-div bg-[#CAE7F633]">
+      <div class="heading-text">
+        DGCA Exam <span class="text-[#1C3867]">Eligibility</span>
+      </div>
+      <div class="max-w-[1400px] w-full lg:w-[90%] p-6">
+        <div class="grid grid-cols-12 gap-6 w-full">
+          <div class="col-span-12 lg:col-span-4 flex flex-col gap-4">
+            <h2
+              class="py-2 text-left text-lg md:text-xl font-semibold capitalize text-[#1C3867] border-b-2 border-[#D9D9D9] w-full"
+            >
+              Flight Training in India
+            </h2>
+            <ul class="flex flex-col gap-2">
+              <li class="flex flex-row items-center gap-2">
+                <div class="w-5">
+                  <img
+                    class="w-full"
+                    src="./public/2-pointer-hat.svg"
+                    alt=""
+                    srcset=""
+                  />
+                </div>
+                <p class="text-black capitalize text-lg">Navigation</p>
+              </li>
+              <li class="flex flex-row items-center gap-2">
+                <div class="w-5">
+                  <img
+                    class="w-full"
+                    src="./public/2-pointer-hat.svg"
+                    alt=""
+                    srcset=""
+                  />
+                </div>
+                <p class="text-black capitalize text-lg">Meteorology</p>
+              </li>
+              <li class="flex flex-row items-center gap-2">
+                <div class="w-5">
+                  <img
+                    class="w-full"
+                    src="./public/2-pointer-hat.svg"
+                    alt=""
+                    srcset=""
+                  />
+                </div>
+                <p class="text-black capitalize text-lg">Regulations</p>
+              </li>
+              <li class="flex flex-row items-center gap-2">
+                <div class="w-5">
+                  <img
+                    class="w-full"
+                    src="./public/2-pointer-hat.svg"
+                    alt=""
+                    srcset=""
+                  />
+                </div>
+                <p class="text-black capitalize text-lg">Technical General</p>
+              </li>
+              <li class="flex flex-row items-center gap-2">
+                <div class="w-5">
+                  <img
+                    class="w-full"
+                    src="./public/2-pointer-hat.svg"
+                    alt=""
+                    srcset=""
+                  />
+                </div>
+                <p class="text-black capitalize text-lg">Technical Specific</p>
+              </li>
+              <li class="flex flex-row items-center gap-2">
+                <div class="w-5">
+                  <img
+                    class="w-full"
+                    src="./public/2-pointer-hat.svg"
+                    alt=""
+                    srcset=""
+                  />
+                </div>
+                <p class="text-black capitalize text-lg">RTR</p>
+              </li>
+            </ul>
+          </div>
+          <div class="col-span-12 lg:col-span-8 flex flex-col gap-4">
+            <h2
+              class="py-2 text-left text-lg md:text-xl font-semibold capitalize text-[#1C3867] border-b-2 border-[#D9D9D9] w-full"
+            >
+              Flight training abroad
+            </h2>
+            <div class="grid grid-cols-8 gap-2">
+              <ul
+                class="col-span-8 md:col-span-4 flex flex-col gap-2 md:border-r-2 md:border-[#D9D9D9]"
+              >
+                <li class="flex flex-row items-center gap-2">
+                  <h3
+                    class="py-1 text-left text-base md:text-lg font-semibold capitalize text-[#1C3867]"
+                  >
+                    Commonwealth countries - New Zealand, Canada etc
+                  </h3>
+                </li>
+                <li class="flex flex-row items-center gap-2">
+                  <div class="w-5">
+                    <img
+                      class="w-full"
+                      src="./public/2-pointer-hat.svg"
+                      alt=""
+                      srcset=""
+                    />
+                  </div>
+                  <p class="text-black capitalize text-lg">Navigation</p>
+                </li>
+                <li class="flex flex-row items-center gap-2">
+                  <div class="w-5">
+                    <img
+                      class="w-full"
+                      src="./public/2-pointer-hat.svg"
+                      alt=""
+                      srcset=""
+                    />
+                  </div>
+                  <p class="text-black capitalize text-lg">Meteorology</p>
+                </li>
+                <li class="flex flex-row items-center gap-2">
+                  <div class="w-5">
+                    <img
+                      class="w-full"
+                      src="./public/2-pointer-hat.svg"
+                      alt=""
+                      srcset=""
+                    />
+                  </div>
+                  <p class="text-black capitalize text-lg">Regulations</p>
+                </li>
+              </ul>
+              <div
+                class="md:hidden h-[3px] col-span-8 bg-[#1C3867] rounded my-2"
+              ></div>
+              <ul class="col-span-8 md:col-span-4 flex flex-col gap-2 md:pl-2">
+                <li class="flex flex-row items-center gap-2">
+                  <h3
+                    class="py-1 text-left text-base md:text-lg font-semibold capitalize text-[#1C3867]"
+                  >
+                    Non Commonwealth countries - USA
+                  </h3>
+                </li>
+                <li class="flex flex-row items-center gap-2">
+                  <div class="w-5">
+                    <img
+                      class="w-full"
+                      src="./public/2-pointer-hat.svg"
+                      alt=""
+                      srcset=""
+                    />
+                  </div>
+                  <p class="text-black capitalize text-lg">Navigation</p>
+                </li>
+                <li class="flex flex-row items-center gap-2">
+                  <div class="w-5">
+                    <img
+                      class="w-full"
+                      src="./public/2-pointer-hat.svg"
+                      alt=""
+                      srcset=""
+                    />
+                  </div>
+                  <p class="text-black capitalize text-lg">Meteorology</p>
+                </li>
+                <li class="flex flex-row items-center gap-2">
+                  <div class="w-5">
+                    <img
+                      class="w-full"
+                      src="./public/2-pointer-hat.svg"
+                      alt=""
+                      srcset=""
+                    />
+                  </div>
+                  <p class="text-black capitalize text-lg">Regulations</p>
+                </li>
+                <li class="flex flex-row items-center gap-2">
+                  <div class="w-5">
+                    <img
+                      class="w-full"
+                      src="./public/2-pointer-hat.svg"
+                      alt=""
+                      srcset=""
+                    />
+                  </div>
+                  <p class="text-black capitalize text-lg">RTR</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div
+            class="col-span-12 flex justify-center items-center p-4 rounded-xl bg-[#CAE7F6B2]"
+          >
+            <h2
+              class="text-center text-base md:text-lg font-semibold capitalize text-[#1C3867] w-full"
+            >
+              RTR - Radio telephony restricted (Aeronautical)
+            </h2>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- boasting passing results -->
+    <section
+      id="passing results"
+      class="py-10 relative my-10 grid w-full place-items-center bg-[#A7E1FF1A]"
+    >
+      <img
+        src="./public/gt-bg.png"
+        class="hidden lg:block w-full h-full absolute top-0 left-0 -z-10 object-cover object-top"
+        alt=""
+      />
+
+      <div class="max-w-[1400px] grid place-items-center">
+        <div
+          class="w-full flex flex-col lg:flex-row items-center justify-center gap-6"
+        >
+          <h1
+            class="w-full lg:w-[20vw] capitalize text-[#1c3867] p-6 font-bold text-3xl md:text-4xl line-h-[125px] text-center lg:text-left pl-auto"
+          >
+            Boasting <br class="hidden lg:block" />
+            outstanding <br />
+            pass results
+          </h1>
+          <div class="relative w-[90vw] lg:w-[65vw]">
+            <div
+              class="h-full w-[20%] hidden md:block absolute bg-gradient-to-r from-[#F8FDFF] to-[#F8FDFF00]"
+            ></div>
+            <div
+              id="cardCarousel"
+              class="flex gap-4 overflow-x-auto whitespace-nowrap scroll-smooth scrollbar-hide py-4"
+            ></div>
+          </div>
+        </div>
+        <div class="flex justify-center mt-4 mb-2">
+          <button
+            onclick="scrollCards('left')"
+            class="bg-white px-6 py-2 rounded-l-full shadow hover:bg-gray-100"
+          >
+            ←
+          </button>
+          <button
+            onclick="scrollCards('right')"
+            class="bg-white px-6 py-2 rounded-r-full shadow hover:bg-gray-100"
+          >
+            →
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- enroll wc -->
+    <section id="enroll-wc" class="section-div">
+      <div class="section-inside grid place-items-center gap-3">
+        <h1 class="heading-text">Enroll With Confidence</h1>
+        <h2
+          class="text-3xl md:text-4xl capitalize text-[#1C3867] text-center font-[500]"
+        >
+          Check out our student friendly lectures
+        </h2>
+        <div
+          class="w-full flex flex-col lg:flex-row items-center justify-center gap-6"
+        >
+          <div class="w-[90vw]">
+            <div
+              id="enrollCardCarousel"
+              class="flex gap-4 overflow-x-auto scroll-smooth scrollbar-hide py-4"
+            ></div>
+          </div>
+        </div>
+        <div class="flex justify-center mt-4 mb-2">
+          <button
+            onclick="scrollEnrollCards('left')"
+            class="bg-white px-6 py-2 rounded-l-full shadow hover:bg-gray-100"
+          >
+            ←
+          </button>
+          <button
+            onclick="scrollEnrollCards('right')"
+            class="bg-white px-6 py-2 rounded-r-full shadow hover:bg-gray-100"
+          >
+            →
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- What You Get! -->
+    <section class="section-div">
+      <div
+        class="section-inside flex flex-col gap-10 justify-center items-center"
+      >
+        <div class="flex flex-col w-full gap-2 justify-center items-center">
+          <h1 class="title-Text">What You Get!</h1>
+        </div>
+        <div
+          class="flex flex-col gap-6 items-center justify-center border-[#1C386780] border rounded-2xl md:border-0 w-full p-4"
+        >
+          <div
+            class="w-full grid grid-cols-12 md:grid-cols-6 lg:grid-cols-5 md:gap-4"
+          >
+            <div class="understand-box-2">
+              <div class="bg-[#CAE7F6] rounded-lg p-2">
+                <img src="./public/2-wyg-1.svg" class="w-7" alt="" />
+              </div>
+              <p
+                class="text-base md:text-lg font-semibold text-[#1C3867] text-left"
+              >
+                books
+              </p>
+            </div>
+            <div class="understand-box-2">
+              <div class="bg-[#CAE7F6] rounded-lg p-2">
+                <img src="./public/2-wyg-2.svg" class="w-7" alt="" />
+              </div>
+              <p
+                class="text-base md:text-lg font-semibold text-[#1C3867] text-left"
+              >
+                Study material
+              </p>
+            </div>
+            <div class="understand-box-2">
+              <div class="bg-[#CAE7F6] rounded-lg p-2">
+                <img src="./public/2-wyg-3.svg" class="w-7" alt="" />
+              </div>
+              <p
+                class="text-base md:text-lg font-semibold text-[#1C3867] text-left"
+              >
+                Question Bank
+              </p>
+            </div>
+            <div class="understand-box-2">
+              <div class="bg-[#CAE7F6] rounded-lg p-2">
+                <img src="./public/2-wyg-4.svg" class="w-7" alt="" />
+              </div>
+              <p
+                class="text-base md:text-lg font-semibold text-[#1C3867] text-left"
+              >
+                DGCA Mock tests
+              </p>
+            </div>
+            <div class="understand-box-2">
+              <div class="bg-[#CAE7F6] rounded-lg p-2">
+                <img src="./public/2-wyg-5.svg" class="w-7" alt="" />
+              </div>
+              <p
+                class="text-base md:text-lg font-semibold text-[#1C3867] text-left"
+              >
+                Computer Number
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- computer networks -->
+    <section class="section-div bg-[#CAE7F666]">
+      <div class="max-w-[1400px] w-[90%]">
+        <div
+          class="w-full flex flex-col lg:flex-row gap-4 items-center justify-center"
+        >
+          <div class="flex-1 flex flex-col gap-4">
+            <h1 class="title-Text text-left mb-2">
+              DGCA
+              <span class="text-black">
+                Computer Number <br class="hidden lg:block" />
+                Process</span
+              >
+            </h1>
+            <p
+              class="text-left font-normal line-height-[25px] text-[#707070] w-fit"
+            >
+              A Computer Number is a unique identification number issued by
+              DGCA, essential for appearing in any pilot licensing examination.
+              At ThePilot.in, we provide complete guidance and support to help
+              you apply for your Computer Number correctly—ensuring all
+              documents are in order and the process is smooth and hassle-free.
+              Start your aviation journey with the right foundation.
+            </p>
+          </div>
+          <div class="flex-1">
+            <img
+              src="./public/2-comp-num-main.png"
+              class="w-full"
+              alt=""
+              srcset=""
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- student gallry -->
+    <section class="section-div">
+      <div class="section-inside">
+        <h1 class="heading-text mb-6">Student Gallery</h1>
+        <div
+          class="w-full flex flex-col lg:flex-row items-center justify-center gap-6"
+        >
+          <div class="w-[90vw]">
+            <div
+              id="galleryCardCarousel"
+              class="flex gap-6 overflow-x-auto scroll-smooth scrollbar-hide py-4"
+            >
+              <div
+                class="w-[200px] lg:w-[300px] 2xl:w-[350px] shrink-0 overflow-hidden rounded-xl"
+              >
+                <img
+                  src="./public/2-gallery-1.jpeg"
+                  class="aspect-[3/4] object-cover"
+                  alt=""
+                />
+              </div>
+              <div
+                class="w-[200px] lg:w-[300px] 2xl:w-[350px] shrink-0 overflow-hidden rounded-xl"
+              >
+                <img
+                  src="./public/2-gallery-2.jpeg"
+                  class="aspect-[3/4] object-cover"
+                  alt=""
+                />
+              </div>
+              <div
+                class="w-[200px] lg:w-[300px] 2xl:w-[350px] shrink-0 overflow-hidden rounded-xl"
+              >
+                <img
+                  src="./public/2-gallery-3.jpeg"
+                  class="aspect-[3/4] object-cover"
+                  alt=""
+                />
+              </div>
+              <div
+                class="w-[200px] lg:w-[300px] 2xl:w-[350px] shrink-0 overflow-hidden rounded-xl"
+              >
+                <img
+                  src="./public/2-gallery-4.jpeg"
+                  class="aspect-[3/4] object-cover"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-center mt-4 mb-2">
+          <button
+            onclick="scrollGalleryCards('left')"
+            class="bg-white px-6 py-2 rounded-l-full shadow hover:bg-gray-100"
+          >
+            ←
+          </button>
+          <button
+            onclick="scrollGalleryCards('right')"
+            class="bg-white px-6 py-2 rounded-r-full shadow hover:bg-gray-100"
+          >
+            →
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- Syllabus -->
+    <section
+      class="hidden py-10 relative lg:flex flex-col w-full items-center justify-center p-6"
+    >
+      <div class="section-inside grid place-items-center">
+        <h1 class="heading-text mb-6">Syllabus</h1>
+        <div class="w-[90%] grid grid-cols-12 gap-4">
+          <ul class="col-span-3 flex flex-col text-base w-full gap-2">
+            <li class="flex flex-row gap-4 bg-[#1C3867] py-4 px-6 text-white">
+              <div class="">
+                <img src="./public/checkbox-checked.svg" alt="" />
+              </div>
+              <p>Air Metrology</p>
+            </li>
+            <li
+              class="flex flex-row gap-4 bg-[#F6F6F6] w-full py-2 px-4 text-[#707070]"
+            >
+              <div class="">
+                <img src="./public/checkbox-unchecked.svg" alt="" />
+              </div>
+
+              <p>Air Regulations</p>
+            </li>
+            <li
+              class="flex flex-row gap-4 bg-[#F6F6F6] py-2 px-4 text-[#707070]"
+            >
+              <div class="">
+                <img src="./public/checkbox-unchecked.svg" alt="" />
+              </div>
+              <p>Air Navigation</p>
+            </li>
+            <li
+              class="flex flex-row gap-4 bg-[#F6F6F6] py-2 px-4 text-[#707070]"
+            >
+              <div class="">
+                <img src="./public/checkbox-unchecked.svg" alt="" />
+              </div>
+              <p>Air General</p>
+            </li>
+            <li
+              class="flex flex-row gap-4 bg-[#F6F6F6] py-2 px-4 text-[#707070]"
+            >
+              <div class="">
+                <img src="./public/checkbox-unchecked.svg" alt="" />
+              </div>
+              <p>RTR</p>
+            </li>
+          </ul>
+          <div class="col-span-9 grid grid-cols-2">
+            <ul
+              id="syllabus-left"
+              class="col-span-2 flex flex-col text-base w-full gap-2"
+            >
+              <li
+                class="grid grid-cols-12 gap-4 bg-[#1C3867] py-4 px-6 text-white"
+              >
+                <p class="text-base col-span-2 text-center">Sr No</p>
+                <p class="text-base col-span-4">Topic</p>
+                <p class="text-base col-span-2 text-center">Sr No</p>
+                <p class="text-base col-span-4">Topic</p>
+              </li>
+            </ul>
+            <!-- <ul
+              id="syllabus-right"
+              class="col-span-1 flex flex-col text-base w-full gap-2"
+            >
+              <li
+                class="grid grid-cols-6 gap-4 bg-[#1C3867] py-4 px-6 text-white"
+              >
+                <p class="text-base col-span-2">Sr No</p>
+                <p class="text-base col-span-4">Topic</p>
+              </li>
+            </ul> -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Syllabus -->
+    <section class="section-div lg:hidden">
+      <div class="section-inside grid place-items-center">
+        <h1 class="heading-text mb-6">Syllabus</h1>
+        <div class="w-full flex flex-col gap-4 gap-4">
+          <div class="flex flex-col gap-0 w-full items-start cursor-pointer">
+            <div id="syllabus-item" class="w-full flex flex-col gap-6">
+              <div
+                id="syllabus-title"
+                class="rounded-md bg-[#CAE7F6] p-2 px-4 flex flex-row gap-2 justify-between items-center w-full"
+              >
+                <h1
+                  class="syllabus-title capitalize text-[#1c3867] font-semibold text-lg text-left"
+                >
+                  Air Metrology
+                </h1>
+                <div class="w-6 text-[#1c3867]" id="syllabus-toggle">
+                  <img
+                    src="./public/chevron-dpwn-blue.svg"
+                    id="syllabus-toggle"
+                    class="w-5 h-5 transform transition-transform duration-300"
+                    alt=""
+                  />
+                </div>
+              </div>
+
+              <div
+                class="syllabus-data-wrapper overflow-hidden transition-all duration-500 ease-in-out max-h-0 flex flex-col items-center justify-center gap-2 w-full"
+              >
+                <div
+                  id="data-div"
+                  class="flex flex-col items-center justify-center gap-2 w-full"
+                >
+                  <div class="colored-tile">
+                    <div class="w-6 text-[#1c3867]">
+                      <p>01</p>
+                    </div>
+                    <h1 class="capitalize text-[#1c3867] text-lg text-left">
+                      Air Metrology
+                    </h1>
+                  </div>
+                  <div class="white-tile">
+                    <div class="w-6 text-[#1c3867]">
+                      <p>02</p>
+                    </div>
+                    <h1 class="capitalize text-[#1c3867] text-lg text-left">
+                      Atmospheric Pressure
+                    </h1>
+                  </div>
+                  <div class="colored-tile">
+                    <div class="w-6 text-[#1c3867]">
+                      <p>03</p>
+                    </div>
+                    <h1 class="capitalize text-[#1c3867] text-lg text-left">
+                      Temperature
+                    </h1>
+                  </div>
+                  <div class="white-tile">
+                    <div class="w-6 text-[#1c3867]">
+                      <p>04</p>
+                    </div>
+                    <h1 class="capitalize text-[#1c3867] text-lg text-left">
+                      Air Density
+                    </h1>
+                  </div>
+                  <div class="colored-tile">
+                    <div class="w-6 text-[#1c3867]">
+                      <p>05</p>
+                    </div>
+                    <h1 class="capitalize text-[#1c3867] text-lg text-left">
+                      Humidity
+                    </h1>
+                  </div>
+                </div>
+                <div class="flex justify-between mt-4 mb-2 w-full">
+                  <button
+                    class="bg-white px-6 py-2 rounded-full shadow hover:bg-gray-100"
+                  >
+                    ←
+                  </button>
+                  <button
+                    class="bg-white px-6 py-2 rounded-full shadow hover:bg-gray-100"
+                  >
+                    →
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div id="syllabus-item" class="w-full flex flex-col gap-6">
+              <div
+                id="syllabus-title"
+                class="rounded-md bg-[#CAE7F6] p-2 px-4 flex flex-row gap-2 justify-between items-center w-full"
+              >
+                <h1
+                  class="syllabus-title capitalize text-[#1c3867] font-semibold text-lg text-left"
+                >
+                  Air Regulations
+                </h1>
+                <div class="w-6 text-[#1c3867]" id="syllabus-toggle">
+                  <img
+                    src="./public/chevron-dpwn-blue.svg"
+                    id="syllabus-toggle"
+                    class="w-5 h-5 transform transition-transform duration-300"
+                    alt=""
+                  />
+                </div>
+              </div>
+
+              <div
+                class="syllabus-data-wrapper overflow-hidden transition-all duration-500 ease-in-out max-h-0 flex flex-col items-center justify-center gap-2 w-full"
+              >
+                <div
+                  id="data-div"
+                  class="flex flex-col items-center justify-center gap-2 w-full"
+                >
+                  <div class="colored-tile">
+                    <div class="w-6 text-[#1c3867]">
+                      <p>01</p>
+                    </div>
+                    <h1 class="capitalize text-[#1c3867] text-lg text-left">
+                      Air Metrology
+                    </h1>
+                  </div>
+                  <div class="white-tile">
+                    <div class="w-6 text-[#1c3867]">
+                      <p>02</p>
+                    </div>
+                    <h1 class="capitalize text-[#1c3867] text-lg text-left">
+                      Atmospheric Pressure
+                    </h1>
+                  </div>
+                  <div class="colored-tile">
+                    <div class="w-6 text-[#1c3867]">
+                      <p>03</p>
+                    </div>
+                    <h1 class="capitalize text-[#1c3867] text-lg text-left">
+                      Temperature
+                    </h1>
+                  </div>
+                  <div class="white-tile">
+                    <div class="w-6 text-[#1c3867]">
+                      <p>04</p>
+                    </div>
+                    <h1 class="capitalize text-[#1c3867] text-lg text-left">
+                      Air Density
+                    </h1>
+                  </div>
+                  <div class="colored-tile">
+                    <div class="w-6 text-[#1c3867]">
+                      <p>05</p>
+                    </div>
+                    <h1 class="capitalize text-[#1c3867] text-lg text-left">
+                      Humidity
+                    </h1>
+                  </div>
+                </div>
+                <div class="flex justify-between mt-4 mb-2 w-full">
+                  <button
+                    class="bg-white px-6 py-2 rounded-full shadow hover:bg-gray-100"
+                  >
+                    ←
+                  </button>
+                  <button
+                    class="bg-white px-6 py-2 rounded-full shadow hover:bg-gray-100"
+                  >
+                    →
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div id="syllabus-item" class="w-full flex flex-col gap-6">
+              <div
+                id="syllabus-title"
+                class="rounded-md bg-[#CAE7F6] p-2 px-4 flex flex-row gap-2 justify-between items-center w-full"
+              >
+                <h1
+                  class="syllabus-title capitalize text-[#1c3867] font-semibold text-lg text-left"
+                >
+                  Air Navigation
+                </h1>
+                <div class="w-6 text-[#1c3867]" id="syllabus-toggle">
+                  <img
+                    src="./public/chevron-dpwn-blue.svg"
+                    id="syllabus-toggle"
+                    class="w-5 h-5 transform transition-transform duration-300"
+                    alt=""
+                  />
+                </div>
+              </div>
+
+              <div
+                class="syllabus-data-wrapper overflow-hidden transition-all duration-500 ease-in-out max-h-0 flex flex-col items-center justify-center gap-2 w-full"
+              >
+                <div
+                  id="data-div"
+                  class="flex flex-col items-center justify-center gap-2 w-full"
+                >
+                  <div class="colored-tile">
+                    <div class="w-6 text-[#1c3867]">
+                      <p>01</p>
+                    </div>
+                    <h1 class="capitalize text-[#1c3867] text-lg text-left">
+                      Air Metrology
+                    </h1>
+                  </div>
+                  <div class="white-tile">
+                    <div class="w-6 text-[#1c3867]">
+                      <p>02</p>
+                    </div>
+                    <h1 class="capitalize text-[#1c3867] text-lg text-left">
+                      Atmospheric Pressure
+                    </h1>
+                  </div>
+                  <div class="colored-tile">
+                    <div class="w-6 text-[#1c3867]">
+                      <p>03</p>
+                    </div>
+                    <h1 class="capitalize text-[#1c3867] text-lg text-left">
+                      Temperature
+                    </h1>
+                  </div>
+                  <div class="white-tile">
+                    <div class="w-6 text-[#1c3867]">
+                      <p>04</p>
+                    </div>
+                    <h1 class="capitalize text-[#1c3867] text-lg text-left">
+                      Air Density
+                    </h1>
+                  </div>
+                  <div class="colored-tile">
+                    <div class="w-6 text-[#1c3867]">
+                      <p>05</p>
+                    </div>
+                    <h1 class="capitalize text-[#1c3867] text-lg text-left">
+                      Humidity
+                    </h1>
+                  </div>
+                </div>
+                <div class="flex justify-between mt-4 mb-2 w-full">
+                  <button
+                    class="bg-white px-6 py-2 rounded-full shadow hover:bg-gray-100"
+                  >
+                    ←
+                  </button>
+                  <button
+                    class="bg-white px-6 py-2 rounded-full shadow hover:bg-gray-100"
+                  >
+                    →
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div id="syllabus-item" class="w-full flex flex-col gap-6">
+              <div
+                id="syllabus-title"
+                class="rounded-md bg-[#CAE7F6] p-2 px-4 flex flex-row gap-2 justify-between items-center w-full"
+              >
+                <h1
+                  class="syllabus-title capitalize text-[#1c3867] font-semibold text-lg text-left"
+                >
+                  Technical General
+                </h1>
+                <div class="w-6 text-[#1c3867]" id="syllabus-toggle">
+                  <img
+                    src="./public/chevron-dpwn-blue.svg"
+                    id="syllabus-toggle"
+                    class="w-5 h-5 transform transition-transform duration-300"
+                    alt=""
+                  />
+                </div>
+              </div>
+
+              <div
+                class="syllabus-data-wrapper overflow-hidden transition-all duration-500 ease-in-out max-h-0 flex flex-col items-center justify-center gap-2 w-full"
+              >
+                <div
+                  id="data-div"
+                  class="flex flex-col items-center justify-center gap-2 w-full"
+                >
+                  <div class="colored-tile">
+                    <div class="w-6 text-[#1c3867]">
+                      <p>01</p>
+                    </div>
+                    <h1 class="capitalize text-[#1c3867] text-lg text-left">
+                      Air Metrology
+                    </h1>
+                  </div>
+                  <div class="white-tile">
+                    <div class="w-6 text-[#1c3867]">
+                      <p>02</p>
+                    </div>
+                    <h1 class="capitalize text-[#1c3867] text-lg text-left">
+                      Atmospheric Pressure
+                    </h1>
+                  </div>
+                  <div class="colored-tile">
+                    <div class="w-6 text-[#1c3867]">
+                      <p>03</p>
+                    </div>
+                    <h1 class="capitalize text-[#1c3867] text-lg text-left">
+                      Temperature
+                    </h1>
+                  </div>
+                  <div class="white-tile">
+                    <div class="w-6 text-[#1c3867]">
+                      <p>04</p>
+                    </div>
+                    <h1 class="capitalize text-[#1c3867] text-lg text-left">
+                      Air Density
+                    </h1>
+                  </div>
+                  <div class="colored-tile">
+                    <div class="w-6 text-[#1c3867]">
+                      <p>05</p>
+                    </div>
+                    <h1 class="capitalize text-[#1c3867] text-lg text-left">
+                      Humidity
+                    </h1>
+                  </div>
+                </div>
+                <div class="flex justify-between mt-4 mb-2 w-full">
+                  <button
+                    class="bg-white px-6 py-2 rounded-full shadow hover:bg-gray-100"
+                  >
+                    ←
+                  </button>
+                  <button
+                    class="bg-white px-6 py-2 rounded-full shadow hover:bg-gray-100"
+                  >
+                    →
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- benifits -->
+    <section class="section-div bg-[#CAE7F6]/40">
+      <img
+        src="./public/2-benifits-plane.png"
+        class="hidden lg:block w-[300px] absolute top-0 lg:top-[-30%] left-0"
+        alt=""
+      />
+
+      <div class="max-w-[1400px] w-[90%]">
+        <div
+          class="py-6 w-full flex flex-col lg:flex-row gap-4 items-center justify-center"
+        >
+          <div class="flex-1 flex flex-col gap-4">
+            <h1 class="title-Text text-left mb-2">
+              <span class="text-black text-3xl">
+                ThePilot.in Ground Classes</span
+              >
+              <br />
+              Benefits
+            </h1>
+            <ul class="flex flex-col gap-3">
+              <li class="flex flex-row gap-2 justify-start items-center">
+                <div class="h-2 w-2 rounded-full bg-[#2C3A9B]"></div>
+                <p class="text-left font-normal text-[#707070] w-fit">
+                  Support services for DGCA exam registration and computer
+                  number
+                </p>
+              </li>
+              <li class="flex flex-row gap-2 justify-start items-center">
+                <div class="h-2 w-2 rounded-full bg-[#2C3A9B]"></div>
+                <p class="text-left font-normal text-[#707070] w-fit">
+                  Comprehensive Pilot study material
+                </p>
+              </li>
+              <li class="flex flex-row gap-2 justify-start items-center">
+                <div class="h-2 w-2 rounded-full bg-[#2C3A9B]"></div>
+                <p class="text-left font-normal text-[#707070] w-fit">
+                  Chapter wise question bank and test series
+                </p>
+              </li>
+              <li class="flex flex-row gap-2 justify-start items-center">
+                <div class="h-2 w-2 rounded-full bg-[#2C3A9B]"></div>
+                <p class="text-left font-normal text-[#707070] w-fit">
+                  DGCA exam oriented test series
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div class="flex-1">
+            <img
+              src="./public/2-benifits-main.png"
+              class="w-full"
+              alt=""
+              srcset=""
+            />
+          </div>
+        </div>
+      </div>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1440 320"
+        class="w-full h-[100px] absolute bottom-0 left-0"
+        preserveAspectRatio="none"
+      >
+        <path
+          fill="#ffffff"
+          fill-opacity="1"
+          d="M0,96L80,112C160,128,320,160,480,149.3C640,139,800,85,960,58.7C1120,32,1280,32,1360,32L1440,32L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
+        ></path>
+      </svg>
+    </section>
+    <!-- footer -->
+    <footer
+      class="bg-[#1C3867] overflow-hidden px-6 pt-10 md:px-16 lg:px-20 pb-6 md:mb-6 w-full md:w-[96vw] md:mx-auto md:rounded-2xl relative"
+    >
+      <div
+        class="absolute bottom-0 w-full h-full right-0 z-10 pointer-events-none"
+      >
+        <img
+          src="./public/footer-vector.svg"
+          class="w-full h-full object-cover lg:object-fill"
+          alt=""
+        />
+      </div>
+      <div
+        class="absolute bottom-0 w-full h-full right-0 z-0 pointer-events-none"
+      >
+        <img
+          src="./public/footer-grid.svg"
+          class="w-full h-full object-cover lg:object-fill"
+          alt=""
+        />
+      </div>
+
+      <div class="grid grid-cols-12 mt-10 gap-6 z-10 w-full h-full">
+        <div
+          class="col-span-12 md:col-span-6 lg:col-span-4 flex flex-col gap-4 items-start"
+        >
+          <div class="w-[30%] lg:w-[60%]">
+            <img class="w-full" src="./public/pilot-logo-white.svg" alt="" />
+          </div>
+          <p class="text-[12px] font-normal md:text-[16px] text-white">
+            ThePilot.in is absolutely committed to provide the highest quality
+            of training in a supportive and cost conscious environment.
+          </p>
+          <div class="flex flex-col gap-3">
+            <div
+              class="text-[16px] md:text-[22px] text-[#A7E1FF] flex flex-col"
+            >
+              call us
+            </div>
+            <ul class="flex flex-col gap-4 md:gap-3 lg:gap-4 mb-6">
+              <li>
+                <a href="tel:+91-7738901234" target="_blank" class="footer-link"
+                  >+91-7738901234</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="flex flex-col gap-3">
+            <p class="text-[16px] md:text-[22px] text-[#A7E1FF] flex flex-col">
+              email us
+            </p>
+            <ul class="flex flex-col gap-4 md:gap-3 lg:gap-4 mb-6">
+              <li>
+                <a
+                  href="mailto:info@thepilot.in"
+                  target="_blank"
+                  class="footer-link"
+                  >info@thepilot.in</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="col-span-12 md:col-span-6 lg:col-span-3 flex flex-col gap-3 md:gap-6 items-start lg:mx-auto"
+        >
+          <div class="text-[16px] md:text-[22px] text-[#A7E1FF] flex flex-col">
+            Quick Link
+          </div>
+          <ul
+            class="flex flex-col gap-4 md:gap-3 lg:gap-4 text-white text-[15px]"
+          >
+            <li>
+              <a
+                href="https://thepilot.in/pages/how-to-become-a-pilot/"
+                target="_blank"
+                class="footer-link"
+                >How to become a pilot?</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://thepilot.in/pages/dgca-ground-classes-pilot-study/"
+                class="footer-link"
+                >DGCA Ground Classes For CPL</a
+              >
+            </li>
+            <li>
+              <a href="#flight-training" class="footer-link"
+                >Commercial Pilot Training</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://thepilot.in/pages/air-india-cadet-pilot-program/"
+                class="footer-link"
+                >Air India cadet pilot program</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://thepilot.in/pages/indigo-cadet-pilot-program/"
+                class="footer-link"
+                >Indigo cadet pilot program</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://thepilot.in/pages/how-to-become-a-pilot/"
+                target="_blank"
+                class="footer-link"
+                >Education Loans</a
+              >
+            </li>
+            <li>
+              <a href="#" class="footer-link">Terms & Conditions</a>
+            </li>
+            <!-- <li>
+              <a href="#" class="footer-link">Disclaimer</a>
+            </li> -->
+          </ul>
+        </div>
+        <div
+          class="col-span-12 md:col-span-6 lg:col-span-2 flex flex-col gap-3 md:gap-6 items-start lg:mx-auto"
+        >
+          <div class="text-[16px] md:text-[22px] text-[#A7E1FF] flex flex-col">
+            Pilot Training
+          </div>
+          <ul
+            class="flex flex-col gap-4 md:gap-3 lg:gap-4 text-white text-[15px]"
+          >
+            <li>
+              <a
+                href="https://thepilot.in/pages/pilot-training-flying-school-usa"
+                target="_blank"
+                class="footer-link"
+                >USA</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://thepilot.in/pages/pilot-training-flying-school-New-zealand"
+                target="_blank"
+                class="footer-link"
+                >New Zealand</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://thepilot.in/pages/pilot-training-flying-school-southafrica"
+                target="_blank"
+                class="footer-link"
+                >South Africa</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://thepilot.in/pages/pilot-training-flying-school-india"
+                target="_blank"
+                class="footer-link"
+                >India</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://thepilot.in/pages/pilot-training-flying-school-canada"
+                target="_blank"
+                class="footer-link"
+                >Canada</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://thepilot.in/pages/pilot-training-flying-school-sri-lanka"
+                target="_blank"
+                class="footer-link"
+                >Sri Lanka</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://thepilot.in/pages/pilot-training-flying-school-australia"
+                target="_blank"
+                class="footer-link"
+                >Australia</a
+              >
+            </li>
+            <li>
+              <a href="#" class="footer-link">Maldives</a>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="col-span-12 md:col-span-6 lg:col-span-3 flex flex-col gap-3 md:gap-6 items-start lg:mx-auto"
+        >
+          <div class="text-[16px] md:text-[22px] text-[#A7E1FF] flex flex-col">
+            social media
+          </div>
+          <div class="flex flex-col gap-3 justify-start items-start">
+            <a
+              href="https://www.facebook.com/YourGuideToFly/"
+              target="_blank"
+              class="flex flex-row gap-4 footer-link justify-between items-center cursor-pointer"
+            >
+              <img src="./public/facebook-logo.svg" alt="" />
+              <p>facebook</p>
+            </a>
+            <a
+              href="https://www.instagram.com/thepilot.in/"
+              target="_blank"
+              class="flex flex-row gap-4 footer-link justify-between items-center cursor-pointer"
+            >
+              <img src="./public/instagram-logo.svg" alt="" />
+              <p>instagram</p>
+            </a>
+            <a
+              href="https://api.whatsapp.com/send/?phone=917738901234&text=Hi%2C+I+would+like+to+know+more+about++how+to+become+a+pilot&type=phone_number&app_absent=0"
+              target="_blank"
+              class="flex flex-row gap-4 footer-link justify-between items-center cursor-pointer"
+            >
+              <img src="./public/whatsapp-logo.svg" alt="" />
+              <p>whatsapp</p>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div
+        class="w-full pt-8 mt-8 pb-8 border-t-2 border-[#ccc] flex gap-4 flex-row justify-between items-center"
+      >
+        <p class="text-center text-[12px] md:text-[16px] text-white">
+          2020 © Copyright The Pilot.
+        </p>
+        <p class="text-center text-[12px] md:text-[16px] text-white">
+          All rights reserved
+        </p>
+      </div>
+    </footer>
+  </body>
 </html>

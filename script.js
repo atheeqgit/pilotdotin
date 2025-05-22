@@ -303,8 +303,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // Initialize
   initCarousel();
 });
-// Passing results
 
+// Passing results
 document.addEventListener("DOMContentLoaded", () => {
   const data = [
     {
@@ -478,6 +478,310 @@ document.addEventListener("DOMContentLoaded", function () {
       } else {
         verticalLine.classList.remove("hidden"); // Plus
       }
+    });
+  });
+});
+
+// syllabus
+document.addEventListener("DOMContentLoaded", function () {
+  const airRegulationSyllabus = [
+    {
+      l: {
+        no: "01",
+        topic: "Atmosphere",
+      },
+      r: {
+        no: "16",
+        topic: "Clear Air Turbulence",
+      },
+    },
+    {
+      l: {
+        no: "02",
+        topic: "Atmospheric Pressure",
+      },
+      r: {
+        no: "17",
+        topic: "Mountain Waves",
+      },
+    },
+    {
+      l: {
+        no: "03",
+        topic: "Temperature",
+      },
+      r: {
+        no: "18",
+        topic: "Tropical Systems",
+      },
+    },
+    {
+      l: {
+        no: "04",
+        topic: "Air Density",
+      },
+      r: {
+        no: "19",
+        topic: "Climatology of India",
+      },
+    },
+    {
+      l: {
+        no: "05",
+        topic: "Humidity",
+      },
+      r: {
+        no: "20",
+        topic: "General Circulation",
+      },
+    },
+    {
+      l: {
+        no: "06",
+        topic: "Winds",
+      },
+      r: {
+        no: "21",
+        topic: "Met Services for Aviation",
+      },
+    },
+    {
+      l: {
+        no: "07",
+        topic: "Visibility & Fog",
+      },
+      r: {
+        no: "22",
+        topic: "Weather Radar & Met Satellites",
+      },
+    },
+    {
+      l: {
+        no: "08",
+        topic: "Vertical Motion & Clouds",
+      },
+      r: {
+        no: "23",
+        topic: "Met Instruments",
+      },
+    },
+    {
+      l: {
+        no: "09",
+        topic: "Stability and Instability of Atmosphere",
+      },
+      r: {
+        no: "24",
+        topic: "Station Model",
+      },
+    },
+    {
+      l: {
+        no: "10",
+        topic: "Optical Phenomena",
+      },
+      r: {
+        no: "25",
+        topic: "Aerodrome Met Reports and Codes of METAR & SPECI",
+      },
+    },
+    {
+      l: {
+        no: "11",
+        topic: "Precipitation",
+      },
+      r: {
+        no: "26",
+        topic: "Aviation Weather Forecasts",
+      },
+    },
+    {
+      l: {
+        no: "12",
+        topic: "Ice Accretion",
+      },
+      r: {
+        no: "27",
+        topic: "Radar Report,Sigmet Message and Satellite Bulletin",
+      },
+    },
+    {
+      l: {
+        no: "13",
+        topic: "Thunderstorm",
+      },
+      r: {
+        no: "28",
+        topic: "Met Doccumentation and Briefing",
+      },
+    },
+    {
+      l: {
+        no: "14",
+        topic: "Air Masses Fronts & Western Disturbances",
+      },
+      r: {
+        no: "29",
+        topic: "Flight Forecast",
+      },
+    },
+    {
+      l: {
+        no: "15",
+        topic: "Jet Streams",
+      },
+      r: {
+        no: "",
+        topic: "",
+      },
+    },
+    // {
+    //   l: {
+    //     no: "sno",
+    //     topic: "topic",
+    //   },
+    //   r: {
+    //     no: "sno",
+    //     topic: "topic",
+    //   },
+    // },
+  ];
+
+  const leftSyllabus = document.getElementById("syllabus-left");
+  // const rightSyllabus = document.getElementById("syllabus-right");
+
+  airRegulationSyllabus.forEach((item, index) => {
+    // const halfLen = (airRegulationSyllabus.length / 2).toFixed(0);
+
+    const bgColor = index % 2 === 0 ? "bg-[#CAE7F666]" : "bg-white";
+    const li = document.createElement("li");
+
+    li.className = `grid grid-cols-12 gap-2 ${bgColor} py-2 px-6 text-[#1C3867] font-[500]`;
+
+    li.innerHTML = `
+   <p class="col-span-2 text-center">${item.l.no}</p>
+              <p class="col-span-4">${item.l.topic}</p>
+   <p class="col-span-2 text-center">${item.r.no}</p>
+              <p class="col-span-4">${item.r.topic}</p>
+  `;
+
+    leftSyllabus.appendChild(li);
+    // if (index < halfLen) {
+    // } else {
+    //   rightSyllabus.appendChild(li);
+    // }
+  });
+});
+
+// enroll with confidance
+document.addEventListener("DOMContentLoaded", () => {
+  const data = [
+    {
+      img: "./public/2-ewc-meteorology.png",
+      title: "Meteorology",
+      desc: "Air meteorology is the study of the Earth's atmosphere and its impact on aviation, equipping pilots with essential knowledge to navigate safely through changing weather conditions and optimize flight operations.",
+    },
+    {
+      img: "./public/2-ewc-reg.png",
+      title: "Regulations",
+      desc: "Air regulations, a critical component of pilot training, encompass the rules and guidelines governing aviation operations to ensure safety, compliance, and efficient air travel, enabling pilots to operate aircraft in accordance with legal and safety standards.",
+    },
+    {
+      img: "./public/2-ewc-nav.jpg",
+      title: "Navigation",
+      desc: "Air navigation, a fundamental aspect of pilot training, involves mastering the skills and techniques needed to plan routes, navigate in the sky, and safely guide aircraft to their destinations, ensuring precise and efficient flight operations.",
+    },
+    {
+      img: "./public/2-ewc-rtr.jpg",
+      title: "RTR",
+      desc: "Radio telephony encompasses the communication techniques and protocols essential for effective and safe air-to-ground and air-to-air communication, ensuring seamless interactions between pilots and air traffic control for safe and efficient flights.",
+    },
+  ];
+
+  const carousel = document.getElementById("enrollCardCarousel");
+
+  // Inject cards
+  data.forEach((item) => {
+    const card = document.createElement("div");
+
+    card.className =
+      "w-[240px] md:w-[300px] lg:w-[350px] shrink-0 bg-[#CAE7F666] overflow-hidden rounded-xl flex flex-col gap-1";
+    card.innerHTML = `
+       <div class="w-full relative ">
+                  <img
+                    src=${item.img}
+                    class="aspect-[4/3] md:aspect-[4/2] object-cover"
+                    alt=""
+                  />
+                </div>
+                <div class="p-4 flex flex-col gap-3 w-full">
+                  <h3
+                    class="text-left text-lg md:text-2xl font-[500] capitalize text-[#1C3867] w-full"
+                  >
+                    ${item.title}
+                  </h3>
+                  <p
+                    class="text-left text-sm md:text-base font-normal text-[#707070] w-fit"
+                  >
+                    ${item.desc}
+                  </p>
+                  </div>
+                  <li
+                    class="flex m-4 flex-row items-center justify-center gap-2 mt-auto"
+                  >
+                    <div class="w-5">
+                      <img
+                        class="w-full"
+                        src="./public/2-pointer-hat.svg"
+                        alt=""
+                        srcset=""
+                      />
+                    </div>
+                    <p
+                      class="text-left mt-auto text-sm md:text-base font-[500] capitalize text-[#1C3867] w-full"
+                    >
+                      Online & Offline Classes
+                    </p>
+                  </li>
+    `;
+    carousel.appendChild(card);
+  });
+});
+
+function scrollEnrollCards(direction) {
+  const container = document.getElementById("enrollCardCarousel");
+  const scrollAmount = 200;
+
+  if (direction === "left") {
+    container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+  } else if (direction === "right") {
+    container.scrollBy({ left: scrollAmount, behavior: "smooth" });
+  }
+}
+
+function scrollGalleryCards(direction) {
+  const container = document.getElementById("galleryCardCarousel");
+  const scrollAmount = 150;
+
+  if (direction === "left") {
+    container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+  } else if (direction === "right") {
+    container.scrollBy({ left: scrollAmount, behavior: "smooth" });
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const syllabusItems = document.querySelectorAll("#syllabus-item");
+
+  syllabusItems.forEach((item) => {
+    const syllabusTitle = item.querySelector("#syllabus-title");
+
+    syllabusTitle.addEventListener("click", () => {
+      const wrapper = item.querySelector(".syllabus-data-wrapper");
+      const chevron = item.querySelector("#syllabus-toggle");
+
+      wrapper.classList.toggle("open");
+      chevron.classList.toggle("rotate-180");
     });
   });
 });
