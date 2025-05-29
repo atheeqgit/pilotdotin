@@ -1263,7 +1263,7 @@ document.addEventListener("DOMContentLoaded", function () {
       <div class="syl-check-box">
         <img src="./public/checkbox-unchecked.svg" alt="Unchecked" />
       </div>
-      <p class="text-left">${item.title}</p>
+      <p class="text-left capitalize">${item.title}</p>
     `;
 
     li.addEventListener("click", () => handleNavClick(idx));
@@ -1416,7 +1416,7 @@ function scrollEnrollCards(direction) {
 
 function scrollGalleryCards(direction) {
   const container = document.getElementById("galleryCardCarousel");
-  const scrollAmount = 150;
+  const scrollAmount = 200;
 
   if (direction === "left") {
     container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
